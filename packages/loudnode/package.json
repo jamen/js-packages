@@ -1,0 +1,33 @@
+{
+  "name": "loudnode",
+  "version": "0.0.0",
+  "description": "Forum middleware.  Dependent on MongoDB and Mustache to create a fully customizable forum system.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamenMarz/loudnode.git"
+  },
+  "keywords": [
+    "forum",
+    "middleware",
+    "http",
+    "mongodb",
+    "mustache"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamenMarz/loudnode/issues"
+  },
+  "homepage": "https://github.com/JamenMarz/loudnode",
+  "dependencies": {
+    "mongodb": "^2.0.33",
+    "mustache": "^2.1.0"
+  }
+}
