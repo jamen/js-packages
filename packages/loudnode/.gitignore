@@ -1,0 +1,5 @@
+# Basic
+.DS_Store
+._*
+test/local/*
+!test/local/README.md
