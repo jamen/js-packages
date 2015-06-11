@@ -3,3 +3,4 @@
 ._*
 test/local/*
 !test/local/README.md
+node_modules/
