@@ -28,6 +28,7 @@
   "homepage": "https://github.com/JamenMarz/loudnode",
   "dependencies": {
     "mongodb": "^2.0.33",
-    "mustache": "^2.1.0"
+    "mustache": "^2.1.0",
+    "socket.io": "^1.3.5"
   }
 }
