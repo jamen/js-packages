@@ -12,25 +12,20 @@ module.exports = exports =
         number:arguments[1],
         name:arguments[2]
       }
-    }
+    };
 
+    // Loosen up object constructing.
     if (!(this instanceof Loud)) return new Loud(convParams);
 
+    // Once we're sure it's a object, set the params to the object for scoping and reusability.
     this.params = convParams;
-
-    // For scoping:
     var _loud = this;
 
     // Recreate user's custom request, plus new functions for forum middleware.
-    this._events = {
-      cache:{
-        request: this.params.server._events.request
-      }
-    };
-
+    this._request = this.params.server._events.request;
     this.params.server._events.request = function(req, res){
-     res.write("ayy")
-      _loud._events.cache.request.apply(this, arguments)
+      res.write("LoudNode insert test. ");
+      _loud._request.apply(this, arguments);
     }
   };
 
