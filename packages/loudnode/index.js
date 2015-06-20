@@ -21,10 +21,14 @@ module.exports = exports =
     this.params = convParams;
     var _loud = this;
 
+    // Set up / read configs, and apply options
+    lib.config(lib, this.params);
+
     // Recreate user's custom request, plus new functions for forum middleware.
     this._request = this.params.server._events.request;
     this.params.server._events.request = function(req, res){
-      res.write("LoudNode insert test. ");
+      res.writeHead(200, {"Content-Type": "text/html"});
+      res.write("<p style='color:#C3C3C3;'>LoudNode inject...</p>")
       _loud._request.apply(this, arguments);
     }
   };
