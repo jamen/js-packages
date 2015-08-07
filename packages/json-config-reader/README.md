@@ -7,7 +7,7 @@ json-config-reader reads configurations, parses them, and caches them in case th
 
 `Reader` consists of a simple API.
 
-### `Reader.read(file, [call])`
+#### `Reader.read(file, [call])`
 With `.read`, you can read asynchronously or synchronously depending on if you provide a callback.
 ```javascript
 var jc = require("json-config-reader");
@@ -24,7 +24,7 @@ jc.read("some.json", function(data){
 
 Note that both refer to the same cache bank.
 
-### `Reader.purgeCache([file])`
+#### `Reader.purgeCache([file])`
 Purge cache sets cache values to undefined in the `Reader.__cache` bank.  This is helpful if you update a JSON file mid-script and need to read it again to get the new value.
 
 ```javascript
@@ -45,7 +45,7 @@ var data3 = jc.read("some.json");
 
 ```
 
-### `Reader.__cache`
+#### `Reader.__cache`
 
 `Reader.__cache` is used internally.  It's an object that routes file pathes to the data they parsed (if successfuly parsed).
 
