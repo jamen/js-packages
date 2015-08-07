@@ -5,17 +5,18 @@
   Reader.__cache = {};
 
   Reader.read = function(file, call){
-    file = path.normalize(file);
+    var file = path.normalize(file),
+        config = {},
+        error = null;
 
     if (typeof Reader.__cache[filename] !== "undefined") return Reader.__cache[filename];
     if (typeof call !== "undefined") {
-      var config = {},
-          error = null;
 
       fs.readFile(file, function(err, data){
         if (!err) {
           try {
             config = JSON.parse(data);
+            Reader.__cache[file] = config;
           } catch (err) {
             error = err;
           }
@@ -29,9 +30,12 @@
 
     } else {
       try {
-        return JSON.parse(fs.readFileSync(file));
+        config = JSON.parse(fs.readFileSync(file));
+        Reader.__cache[file] = config;
+        return config;
       } catch (err) {
-        return err;
+        error = err;
+        return error;
       }
     }
   };
