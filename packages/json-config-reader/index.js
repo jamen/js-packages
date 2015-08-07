@@ -11,7 +11,10 @@
 
     if (typeof Reader.__cache[filename] !== "undefined") return Reader.__cache[filename];
     if (typeof call !== "undefined") {
-
+      if (typeof Reader.__cache[filename] !== "undefined") {
+        call(error, Reader.__cache[filename]);
+        return config;
+      };
       fs.readFile(file, function(err, data){
         if (!err) {
           try {
