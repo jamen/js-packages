@@ -34,8 +34,7 @@
         Reader.__cache[file] = config;
         return config;
       } catch (err) {
-        error = err;
-        return error;
+        return err;
       }
     }
   };
