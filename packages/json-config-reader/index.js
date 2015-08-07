@@ -5,14 +5,13 @@
   Reader.__cache = {};
 
   Reader.read = function(file, call){
-    var file = path.normalize(file),
+    var file = path.resolve(file),
         config = {},
         error = null;
 
-    if (typeof Reader.__cache[filename] !== "undefined") return Reader.__cache[filename];
     if (typeof call !== "undefined") {
-      if (typeof Reader.__cache[filename] !== "undefined") {
-        call(error, Reader.__cache[filename]);
+      if (typeof Reader.__cache[file] !== "undefined") {
+        call(error, Reader.__cache[file]);
         return config;
       };
       fs.readFile(file, function(err, data){
@@ -32,12 +31,24 @@
       });
 
     } else {
+      if (typeof Reader.__cache[file] !== "undefined") return Reader.__cache[file];
       try {
         config = JSON.parse(fs.readFileSync(file));
         Reader.__cache[file] = config;
         return config;
       } catch (err) {
         return err;
+      }
+    }
+  };
+
+  Reader.purgeCache = function(file){
+    /* Since I've heard delete is really slow, I'm not sure what to do here for now, I'll just set it to undefined: */
+    if (typeof file !== "undefined") {
+      Reader.__cache[path.resolve(file)] = undefined;
+    } else {
+      for (var i in Reader.__cache) {
+        Reader.__cache[i] = undefined;
       }
     }
   };
