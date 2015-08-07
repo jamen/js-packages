@@ -25,7 +25,7 @@ jc.read("some.json", function(data){
 Note that both refer to the same cache bank.
 
 #### `Reader.purgeCache([file])`
-Purge cache sets cache values to undefined in the `Reader.__cache` bank.  This is helpful if you update a JSON file mid-script and need to read it again to get the new value.
+`.purgeCache` sets cache values to undefined in the `Reader.__cache` bank.  This is helpful if you update a JSON file mid-script and need to read it again to get the new value.
 
 ```javascript
 // Lets say some.json is { "test": 1 }
@@ -47,7 +47,7 @@ var data3 = jc.read("some.json");
 
 #### `Reader.__cache`
 
-`Reader.__cache` is used internally.  It's an object that routes file pathes to the data they parsed (if successfuly parsed).
+`.__cache` is used internally.  It's an object that routes file paths to the parsed data (if successfully parsed).
 
 ```javascript
 var data1 = jc.read("/home/jamen/some.json");
@@ -56,4 +56,4 @@ var data2 = jc.__cache["/home/jamen/some.json"];
 // Both data1 and data2 are the same.
 ```
 
-*Note!* You should never have to refer to the `Reader.__cache` object yourself.  `Reader.read` does this automatically.
+*Note!* You should never have to refer to the `Reader.__cache` object yourself.  `Reader.read` implements cache lookups, and falls back by reading and parsing the file (then adding that data to the bank).
