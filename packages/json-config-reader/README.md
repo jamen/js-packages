@@ -34,7 +34,7 @@ var data1 = jc.read("some.json");
 fs.writeFileSync("some.json", JSON.stringify({"new": "values!"}));
 var data2 = jc.read("some.json");
 
-// Both data1 and data2 are the same, because the second `.read` fetched from the cache.
+// data1 and data2 are the same.  The second `.read` fetched from the cache.
 
 jc.purgeCache("some.json");
 var data3 = jc.read("some.json");
