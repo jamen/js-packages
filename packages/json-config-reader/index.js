@@ -42,6 +42,7 @@
         } else {
           error = {"type":"parse", "message":"Failed to read file!"};
         }
+        error.__readerFail = true;
         error.raw = err;
         return error;
       }
