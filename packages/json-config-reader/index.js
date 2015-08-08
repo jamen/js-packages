@@ -20,11 +20,11 @@
             config = JSON.parse(data);
             global.__jsoncache[file] = config;
           } catch (err) {
-            error = err;
+            error = {"type":"parse", "message":"Failed to parse file as JSON!", "raw":err};
           }
 
         } else {
-          error = err;
+          error = {"type":"read", "message":"Failed to read file!", "raw":err};
         }
         call(error, config);
 
@@ -37,7 +37,13 @@
         global.__jsoncache[file] = config;
         return config;
       } catch (err) {
-        return err;
+        if (err instanceof SyntaxError) {
+          error = {"type":"parse", "message":"Failed to parse file as JSON!"};
+        } else {
+          error = {"type":"parse", "message":"Failed to read file!"};
+        }
+        error.raw = err;
+        return error;
       }
     }
   };
