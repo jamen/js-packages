@@ -1,65 +1,55 @@
 (function(fs, path){
-  "use strict";
-  var Reader = {};
+  'use strict';
 
-  global.__jsoncache = global.__jsoncache || {};
+  // Resources
+  global.__objectCache = {};
 
-  Reader.read = function(file, call){
-    var file = path.resolve(file),
-        config = {},
-        error = null;
+  // Module
+  module.exports = exports = {
+    __objectCache: global.__objectCache,
 
-    if (typeof call !== "undefined") {
-      if (typeof global.__jsoncache[file] !== "undefined") {
-        call(error, global.__jsoncache[file]);
-        return config;
-      };
-      fs.readFile(file, function(err, data){
-        if (!err) {
-          try {
-            config = JSON.parse(data);
-            global.__jsoncache[file] = config;
-          } catch (err) {
-            error = {"type":"parse", "message":"Failed to parse file as JSON!", "raw":err};
-          }
+    read: function(fileName){
+      fileName = path.resolve(fileName);
+      var fileDataRaw = null, fileData = null;
 
-        } else {
-          error = {"type":"read", "message":"Failed to read file!", "raw":err};
-        }
-        call(error, config);
+      // Try searching cache:
+      if (typeof this.__objectCache === 'undefined') {
+        return this.__objectCache[fileName];
+      }
 
-      });
-
-    } else {
-      if (typeof global.__jsoncache[file] !== "undefined") return global.__jsoncache[file];
+      // Try reading file:
       try {
-        config = JSON.parse(fs.readFileSync(file));
-        global.__jsoncache[file] = config;
-        return config;
-      } catch (err) {
-        if (err instanceof SyntaxError) {
-          error = {"type":"parse", "message":"Failed to parse file as JSON!"};
-        } else {
-          error = {"type":"parse", "message":"Failed to read file!"};
+        fileDataRaw = fs.readFileSync(fileName);
+      } catch (e) {
+        throw {'type':'read', 'original':e};
+      }
+
+      // Try parsing file data:
+      try {
+        fileData = JSON.parse(fileDataRaw);
+        this.__objectCache[fileName] = fileData;
+      } catch (e) {
+        throw {'type':'parse', 'original':e};
+      }
+
+      return fileData;
+    },
+
+    purge: function(fileName){
+      fileName = path.resolve(fileName);
+
+      if (typeof fileName !== 'undefined') {
+        // Purge specific cache:
+        this.__objectCache[fileName] = undefined;
+      } else {
+        // Purge all cache:
+        for (var id in this.__objectCache) {
+          this.__objectCache[id] = undefined;
         }
-        error.__readerFail = true;
-        error.raw = err;
-        return error;
       }
+
+      return true;
     }
   };
-
-  Reader.purgeCache = function(file){
-    /* Since I've heard delete is really slow, I'm not sure what to do here for now, I'll just set it to undefined: */
-    if (typeof file !== "undefined") {
-      global.__jsoncache[path.resolve(file)] = undefined;
-    } else {
-      for (var i in global.__jsoncache) {
-        global.__jsoncache[i] = undefined;
-      }
-    }
-  };
-
-  module.exports = exports = Reader;
-})(require("fs"),
-   require("path"));
+})(require('fs'),
+   require('path'));
