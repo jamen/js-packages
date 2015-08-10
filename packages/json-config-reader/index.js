@@ -13,7 +13,7 @@
       var fileDataRaw = null, fileData = null;
 
       // Try searching cache:
-      if (typeof this.__objectCache === 'undefined') {
+      if (typeof this.__objectCache[fileName] !== 'undefined') {
         return this.__objectCache[fileName];
       }
 
