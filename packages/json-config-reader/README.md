@@ -12,7 +12,7 @@ To use it, you simply use the `require` function after installing it via npm `np
 var jc = require('json-config-reader');
 ```
 
-#### `.read`
+### `.read`
 The `.read` method attempts to read a file, then attempts to parse it as JSON.  If successful, it caches the data.
 
 ```javascript
@@ -30,7 +30,7 @@ var data1 = jc.read('config.json');
 var data2 = jc.read('config.json');
 ```
 
-#### `.purge`
+### `.purge`
 The `.purge` method sets and entry in `global.__jsonCache` to `undefined`, so the `.read` function will re-read the JSON file.
 
 ```javascript
@@ -62,7 +62,7 @@ var data3 = jc.read('my.json');
 // data3 = {'foo': 'bar'}
 ```
 
-#### `.__objectCache` and `global.__objectCache`
+### `.__objectCache` and `global.__objectCache`
 **Note:** You shouldn't ever have to use these objects yourself.  `.read` provides automated functionality to read from the cache object.  These objects are where the cache is stored, you should access them with `.read`.
 
 These objects hold the cache values, they both reference the same value in the memory, so if you change one, it'll change the other.
