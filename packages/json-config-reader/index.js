@@ -14,7 +14,7 @@
 
       // Try searching cache:
       if (typeof this.__objectCache[fileName] !== 'undefined') {
-        return this.__objectCache[fileName];
+        return JSON.parse(JSON.stringify(this.__objectCache[fileName]));
       }
 
       // Try reading file:
