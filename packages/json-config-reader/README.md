@@ -1,6 +1,6 @@
 # json-config-reader
 
-*This package has been replaced by [refig](https://github.com/iora/refig), although it still can be used, refig is recommended.*
+**This package has been replaced by [refig](https://github.com/iora/refig), although it still can be used, refig is recommended.**
 
 This module was made for [iora](https://github.com/iora/iora), but can be used separately to read any JSON configurations.
 
