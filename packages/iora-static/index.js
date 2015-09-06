@@ -1,8 +1,9 @@
 module.exports = exports = function(app, express, config){
   if (typeof config.static !== 'undefined') {
+    config = config.static;
     app.use(
-      config.static.url || '/static',
-      express.static(config.static.folder, config.static.options)
+      config.url || '/static',
+      express.static(config.folder, config.options)
     );
   }
 };
