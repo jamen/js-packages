@@ -1,0 +1,24 @@
+{
+  "name": "iora-static",
+  "version": "1.0.0",
+  "description": "A small controller for implementing a static aspect into your server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iora/iora-static.git"
+  },
+  "keywords": [
+    "iora",
+    "static",
+    "express"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iora/iora-static/issues"
+  },
+  "homepage": "https://github.com/iora/iora-static#readme"
+}
