@@ -1,7 +1,7 @@
 {
   "name": "bco",
   "description": "A better command object",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Jamen Marz",
   "main": "index.js",
   "license": "MIT",
