@@ -56,3 +56,13 @@ var example = console.encode('[43m');
 console.log(example);
 // => <Buffer 1b 5b 34 33 6d>
 ```
+
+### Usage
+
+All you have to do is require `"bco"` to enable the features:
+
+```javascript
+require('bco');
+
+console.log('Hello').log('World!');
+```
