@@ -1,9 +1,6 @@
 if (typeof console !== 'undefined' && console) {
   // Clone methods:
-  var _console = {};
-  for (var method in console) {
-    _console[method] = console[method];
-  }
+  var _console = new console.Console(process.stdout, process.stderr);
 
   var logdata = [];
   console.add = function(){
@@ -89,7 +86,7 @@ if (typeof console !== 'undefined' && console) {
   };
 
   console.assert = function(){
-    _console.assert.apply(this, arguments)
+    _console.assert.apply(this, arguments);
     return this;
   };
 }
