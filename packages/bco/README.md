@@ -10,7 +10,7 @@ console.log('Hello World!').log('Hello again!');
 ```
 
 #### Still native!
-This library still uses the native methods, it "clones" them with `console.Console` and then simply rebuilds the invoke the same native binding with additional features thrown in.
+This library still uses the native methods, it "clones" them with `console.Console` and then simply rebuilds the methods while still invoking the same native binding with additional features thrown in.
 
 #### `.add`
 Pushes a new item to a hidden array which can be logged later on.
@@ -42,7 +42,7 @@ console.write();
 ```
 
 #### `.set`
-Writes an ANSI character, basically a more simple way of doing `console.write(console.encode(input))`:
+Writes an ANSI character...  Basically a more simple way of doing `console.write(console.encode(input))`:
 
 ```javascript
 console.set('[43m').log('Hello!').set('[0m');
