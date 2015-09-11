@@ -1,0 +1,23 @@
+{
+  "name": "bco",
+  "description": "A better command object",
+  "version": "0.0.0",
+  "author": "Jamen Marz",
+  "main": "index.js",
+  "license": "MIT",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamenMarz/bco"
+  },
+
+  "keywords": [
+    "enhance",
+    "log"
+  ],
+
+  "bugs": {
+    "url": "https://github.com/JamenMarz/bco/issues"
+  },
+  "homepage": "https://github.com/JamenMarz/bco"
+}

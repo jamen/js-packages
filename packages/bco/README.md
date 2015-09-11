@@ -1,0 +1,3 @@
+bco
+===
+Better `console` object.
