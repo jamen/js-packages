@@ -8,30 +8,34 @@ To use this, you must first install it wherever your iora server is being deploy
 npm install iora-static
 ```
 
-From here, you'd add it to your `controllers` array in your configuration file for your iora server:
+From here, you'd add it to your `"middleware"` array in your configuration file for your iora server:
 
 ```javascript
 {
   ...
-  "controllers": [
+  "middleware": [
     "iora-static"
   ]
   ...
 }
 ```
 
-Once added, at the base of your iora config, you can add a `"static"` field:
+Once added, at the base of your iora config, you add `"static"` to your `"base"` object (this is the directory that will be static), and a `"static"` objcet at the root:
 
 ```javascript
 {
   ...
-  "controllers": [
+  "middleware": [
     "iora-static"
-  ]
+  ],
+  ...
+  "base": {
+    ...
+    "static": "/path/to/some/folder"
+  },
   ...
   "static": {
     "url": "/resources",
-    "folder": "../resources/public/static",
     "options": {
       "dotfiles": "deny"
     }
