@@ -1,9 +1,12 @@
-module.exports = exports = function(app, express, config){
-  if (typeof config.static !== 'undefined') {
-    config = config.static;
+/*
+ * iora-static: Implement a static aspect to a portion of your server.
+ */
+
+module.exports = function(app, config, express){
+  if (config.static && config.base.static) {
     app.use(
-      config.url || '/static',
-      express.static(config.folder, config.options)
+      config.static.url || '/static',
+      express.static(config.base.static, config.static.options)
     );
   }
 };
