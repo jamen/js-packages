@@ -85,8 +85,6 @@ if (console) {
     };
 
   }
-
-  console.add.set('[43m').add('Hello!').add.set('[0m').write().log('');
 }
 
 return console;
