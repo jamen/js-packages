@@ -1,10 +1,9 @@
-(function(factory){
+(function(factory, g){
 
   if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = factory;
-  } else {
-    window.console = window.bco = factory;
   }
+  g.console = factory;
 
 })(function(){
 
@@ -38,10 +37,10 @@ if (console) {
 
   // Node-specific
   if (typeof window === 'undefined') {
-    console.log(console);
+    
   }
 }
 
 return console;
 
-}());
+}(), this);
