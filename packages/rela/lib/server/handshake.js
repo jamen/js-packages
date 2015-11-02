@@ -17,4 +17,14 @@ module.exports = function(client, bufdata){
   let hash = crypto.createHash('sha1');
   hash.update(wskey + '258EAFA5-E914-47DA-95CA-C5AB0DC85B11');
   let reskey = hash.digest('base64');
+
+
+  client.write(
+    'HTTP/1.1 101 Switching Protocols\r\n' +
+    'Upgrade: websocket\r\n' +
+    'Connection: Upgrade\r\n' +
+    'Sec-WebSocket-Accept: ' + reskey + '\r\n\r\n'
+  );
+  client.shaking = false;
+  client.shook = true;
 };

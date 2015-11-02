@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function(client, data){
-  client.write({'foo': 'bar'});
+  console.log(JSON.stringify(data));
 };
