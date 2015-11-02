@@ -14,18 +14,16 @@ let Server = function(secure){
       'socket': socket,
       'id': this._clients.length,
       'shook': false,
-      'shaking': false
+      'shaking': false,
+      'on': socket.on.bind(socket),
+      'write': function(input){
+        if (typeof input === 'object' && !(input instanceof Buffer)) this.socket.write(JSON.stringify(input));
+        else this.socket.write(input);
+      },
+      'end': socket.end.bind(socket)
     };
+
     this._clients.push(client);
-
-    /* LOOK HERE JAMEN ======================= *\
-        A HUGE COMMENT TO GRAB YOUR ATTENTION
-       WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-       TODO:
-        - Create client.write api (that uses socket.write) for JSON
-
-    \* AAAAAAAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
 
     build.call(this, client);
 
