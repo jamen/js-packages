@@ -19,6 +19,15 @@ let Server = function(secure){
     };
     this._clients.push(client);
 
+    /* LOOK HERE JAMEN ======================= *\
+        A HUGE COMMENT TO GRAB YOUR ATTENTION
+       WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+       TODO:
+        - Create client.write api (that uses socket.write) for JSON
+
+    \* AAAAAAAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
+
     client.socket.on('data', function(data){
       if (client.shaking) socket.end('Ayy lmao');
       else {
