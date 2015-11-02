@@ -4,7 +4,8 @@
   "description": "Create and manage a independent WebSocket server for API systems.",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "spec": "jasmine",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
