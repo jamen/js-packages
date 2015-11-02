@@ -2,8 +2,7 @@
 
 const net = require('net'),
       tls = require('tls'),
-      controller = require('./controller'),
-      handshake = require('./handshake');
+      build = require('./build');
 
 let Server = function(secure){
   this._bound = {};
@@ -28,19 +27,7 @@ let Server = function(secure){
 
     \* AAAAAAAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
 
-    client.socket.on('data', function(data){
-      if (client.shaking) socket.end('Ayy lmao');
-      else {
-        if (!client.shook) handshake(client, data);
-        else controller(client, data);
-      }
-
-    });
-
-    client.socket.on('end', () => {
-      this._clients.slice(client.id, 1);
-      socket.destroy();
-    });
+    build.call(this, client);
 
   };
 
