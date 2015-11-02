@@ -11,7 +11,6 @@ let Server = function(secure){
   this._clients = [];
 
   let handler = (socket) => {
-    socket.write('Hello world')
     let client = {
       'socket': socket,
       'id': this._clients.length,
@@ -21,10 +20,8 @@ let Server = function(secure){
     this._clients.push(client);
 
     client.socket.on('data', function(data){
-      if (client.shaking) {
-        socket.end('Ayy lmao');
-        return;
-      } else {
+      if (client.shaking) socket.end('Ayy lmao');
+      else {
         if (!client.shook) handshake(client, data);
         else controller(client, data);
       }
