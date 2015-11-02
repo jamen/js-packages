@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports = function(client, data){
-  console.log(JSON.stringify(data));
+const decode = require('../decode');
+
+module.exports = function(client, bufdata){
+  let data = decode(bufdata);
+  console.log(data);
 };

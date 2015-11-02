@@ -5,8 +5,8 @@ module.exports = function(bin){
     fin: !!(bin[0] >>> 7),
     masked: !!(bin[1] >>> 7),
   };
-  data.opts = bin[0] - (data.fin ? 128 : 0) - data.reserves;
   data.reserves = ((bin[0] >>> 4) - (data.fin ? 8 : 0));
+  data.opts = bin[0] - (data.fin ? 128 : 0) - data.reserves;
 
   let resume = 1;
 
@@ -35,7 +35,8 @@ module.exports = function(bin){
     data.result.push(bin[resume] ^ data.masks[i % 4]);
     i++; resume++;
   }
-  data.result = new Buffer(data.result).toString();
+  data.rawResult = new Buffer(data.result);
+  data.result = data.rawResult.toString();
 
 
   return data;

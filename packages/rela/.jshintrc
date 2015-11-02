@@ -1,5 +1,6 @@
 {
   "node": true,
+  "jasmine": true,
   "esnext": true,
   "camelcase": true,
   "eqeqeq": true,
