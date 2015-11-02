@@ -5,8 +5,8 @@ module.exports = function(bin){
     fin: !!(bin[0] >>> 7),
     masked: !!(bin[1] >>> 7),
   };
-  data.opts = bin[0] - (data.fin ? 128 : 0) - data.reserves;
   data.reserves = ((bin[0] >>> 4) - (data.fin ? 8 : 0));
+  data.opts = bin[0] - (data.fin ? 128 : 0) - data.reserves;
 
   let resume = 1;
 
