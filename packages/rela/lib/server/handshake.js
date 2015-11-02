@@ -3,6 +3,5 @@
 module.exports = function(client, data){
   client.shaking = true;
   let socket = client.socket;
-
-  socket.write('test');
+  socket.write('Nice');
 };
