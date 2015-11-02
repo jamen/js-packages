@@ -1,6 +1,6 @@
 'use strict';
 
-const decode = require('../../lib').decode,
+const decode = require('../lib').decode,
       clientMessage = new Buffer([129,140,163,113,103,158,235,20,11,242,204,81,16,241,209,29,3,191]);
 
 describe('WebSocket decoder', function(){
