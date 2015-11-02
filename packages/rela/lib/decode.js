@@ -35,7 +35,8 @@ module.exports = function(bin){
     data.result.push(bin[resume] ^ data.masks[i % 4]);
     i++; resume++;
   }
-  data.result = new Buffer(data.result).toString();
+  data.rawResult = new Buffer(data.result);
+  data.result = data.rawResult.toString();
 
 
   return data;
