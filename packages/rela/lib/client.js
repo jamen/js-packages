@@ -33,19 +33,23 @@ Client.prototype.use = function(key){
 };
 
 Client.prototype.error = function(){
-  return this._errors.on.apply(this._errors, arguments);
+  this._errors.on.apply(this._errors, arguments);
+  return this;
 };
 
 Client.prototype.throw = function(){
-  return this._errors.emit.apply(this._errors, arguments);
+  this._errors.emit.apply(this._errors, arguments);
+  return this;
 };
 
 Client.prototype.on = function(){
-  return this.domain[this._currentKey].on.apply(this.domain[this._currentKey], arguments);
+  this.domain[this._currentKey].on.apply(this.domain[this._currentKey], arguments);
+  return this;
 };
 
 Client.prototype.emit = function(){
-  return this.domain[this._currentKey].emit.apply(this.domain[this._currentKey], arguments);
+  this.domain[this._currentKey].emit.apply(this.domain[this._currentKey], arguments);
+  return this;
 };
 
 Client.prototype._errors = new EventEmitter();

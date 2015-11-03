@@ -6,7 +6,7 @@ const net = require('net'),
       Client = require('../client'),
       EventEmitter = require('events');
 
-let Server = function(secure){
+let Server = function(secure, options){
   this.clients = [];
   this.domain = {'method': new EventEmitter()};
   this._events = new EventEmitter();
@@ -18,20 +18,23 @@ let Server = function(secure){
     build.call(this, client);
   };
 
-  this._server = secure ? new tls.Server() : new net.Server();
+  this._server = secure ? new tls.Server(options) : new net.Server(options);
   this._server.on('connection', handler);
 };
 
 Server.prototype.on = function(){
-  return this._events.on.apply(this._events, arguments);
+  this._events.on.apply(this._events, arguments);
+  return this;
 };
 
 Server.prototype.emit = function(){
-  return this._events.emit.apply(this._events, arguments);
+  this._events.emit.apply(this._events, arguments);
+  return this;
 };
 
 Server.prototype.listen = function(){
   this._server.listen.apply(this._server, arguments);
+  return this;
 };
 
 module.exports = Server;
