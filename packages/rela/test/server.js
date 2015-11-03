@@ -9,7 +9,7 @@ module.exports = function(){
       console.log(data);
     });
 
-    client.on('_error', function(a){
+    client.error('invalid json', function(a){
       console.log(a);
     });
   });
