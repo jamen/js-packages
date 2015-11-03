@@ -7,9 +7,7 @@ module.exports = function(){
   test.on('connection', function(client){
     client.on('test', function(data){
       console.log(data);
-    });
-
-    client.error('invalid json', function(a){
+    }).error('invalid json', function(a){
       console.log(a);
     });
   });
