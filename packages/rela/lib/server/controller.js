@@ -12,8 +12,8 @@ module.exports = function(client, bufdata){
   }
 
   for (let key in result) {
-    if (typeof client._domains[key] !== 'undefined') {
-      client._domains[key].emit(result[key], result);
+    if (typeof client.domain[key] !== 'undefined') {
+      client.domain[key].emit(result[key], result);
     }
   }
 };
