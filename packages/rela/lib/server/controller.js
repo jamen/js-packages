@@ -7,7 +7,7 @@ module.exports = function(client, bufdata){
   try {
     result = JSON.parse(result);
   } catch(e) {
-    client.throw('invalid json', client, e);
+    client.throw('invalid json', e);
     return;
   }
 
