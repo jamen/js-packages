@@ -7,7 +7,6 @@ Create and manage independent WebSocket and WSS servers for API systems.  Based 
 ```
 $ npm install rela
 ```
-```
 
 ## Why not [Socket.io][socket.io]?
 Socket.io is a great platform, masterfully made...  However there are 3 things that didn't suit our service, and I can imagine don't suit other services.  So we decided to create our own library.
