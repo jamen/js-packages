@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
   'decode': require('./decode'),
-
-  'Server': require('./server')
+  'encode': require('./encode'),
+  'Server': require('./server'),
 };
