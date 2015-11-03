@@ -15,7 +15,7 @@ module.exports = function(client){
   });
 
   client.socket.on('end', () => {
-    this._clients.slice(client.id, 1);
+    this.clients.slice(client.id, 1);
     client.socket.destroy();
   });
 };

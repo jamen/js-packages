@@ -8,16 +8,14 @@ const net = require('net'),
 
 let Server = function(secure){
   this._connectionListener = ()=>{};
-  this._clients = [];
+  this.clients = [];
   this.domain = {'method': new EventEmitter()};
 
   let handler = (socket) => {
     let client = new Client(socket, this.domain);
-
-    this._clients.push(client);
-
+    client.id = this.clients.length;
+    this.clients.push(client);
     build.call(this, client);
-
   };
 
   this._server = secure ? new tls.Server() : new net.Server();
