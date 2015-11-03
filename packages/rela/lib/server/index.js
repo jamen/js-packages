@@ -2,7 +2,8 @@
 
 const net = require('net'),
       tls = require('tls'),
-      build = require('./build');
+      build = require('./build'),
+      encode = require('../encode');
 
 let Server = function(secure){
   this._bound = {};
@@ -17,8 +18,13 @@ let Server = function(secure){
       'shaking': false,
       'on': socket.on.bind(socket),
       'write': function(input){
-        if (typeof input === 'object' && !(input instanceof Buffer)) this.socket.write(JSON.stringify(input));
-        else this.socket.write(input);
+        if (typeof input === 'object' && !(input instanceof Buffer)) {
+          if (this.shook) this.socket.write(encode(JSON.stringify(input)));
+          else this.socket.write(JSON.stringify(input));
+        } else {
+          if (this.shook) this.socket.write(encode(input));
+          else this.socket.write(input);
+        }
       },
       'end': socket.end.bind(socket)
     };
