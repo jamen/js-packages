@@ -4,7 +4,7 @@ module.exports = function(){
   const Server = require('../lib/server'),
         test = new Server();
 
-  test.connection(function(client){
+  test.on('connection', function(client){
     client.on('test', function(data){
       console.log(data);
     });
