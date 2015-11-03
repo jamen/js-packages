@@ -7,9 +7,9 @@ const net = require('net'),
       EventEmitter = require('events');
 
 let Server = function(secure){
-  this._connectionListener = ()=>{};
   this.clients = [];
   this.domain = {'method': new EventEmitter()};
+  this._events = new EventEmitter();
 
   let handler = (socket) => {
     let client = new Client(socket, this.domain);
@@ -22,8 +22,12 @@ let Server = function(secure){
   this._server.on('connection', handler);
 };
 
-Server.prototype.connection = function(call){
-  this._connectionListener = call || ()=>{};
+Server.prototype.on = function(){
+  return this._events.on.apply(this._events, arguments);
+};
+
+Server.prototype.emit = function(){
+  return this._events.emit.apply(this._events, arguments);
 };
 
 Server.prototype.listen = function(){
