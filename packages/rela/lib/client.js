@@ -32,6 +32,14 @@ Client.prototype.use = function(key){
   return this;
 };
 
+Client.prototype.error = function(){
+  return this._errors.on.apply(this._errors, arguments);
+};
+
+Client.prototype.throw = function(){
+  return this._errors.emit.apply(this._errors, arguments);
+};
+
 Client.prototype.on = function(){
   return this.domain[this._currentKey].on.apply(this.domain[this._currentKey], arguments);
 };
@@ -40,6 +48,7 @@ Client.prototype.emit = function(){
   return this.domain[this._currentKey].emit.apply(this.domain[this._currentKey], arguments);
 };
 
+Client.prototype._errors = new EventEmitter();
 Client.prototype.domain = {};
 
 module.exports = Client;
