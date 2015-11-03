@@ -4,7 +4,9 @@ const controller = require('./controller'),
       handshake = require('./handshake');
 
 module.exports = function(client){
-  client.on('data', function(data){
+  this._connectionListener(client);
+
+  client.socket.on('data', function(data){
     if (client.shaking) client.socket.end('Ayy lmao');
     else {
       if (!client.shook) handshake(client, data);
@@ -12,7 +14,7 @@ module.exports = function(client){
     }
   });
 
-  client.on('end', () => {
+  client.socket.on('end', () => {
     this._clients.slice(client.id, 1);
     client.socket.destroy();
   });
