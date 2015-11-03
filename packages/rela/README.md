@@ -19,7 +19,7 @@ So with all these in mind, we designed Rela to be the counterpart to Socket.io.
 
 By no means is Rela better than Socket.io.  I just believe Socket.io was designed with a different train of thought.  Applications vs API systems.
 
-## Usage
+## Documentation
 Please see [the repo's Wiki][wiki] for documentation on how to use Rela.
 
 ## Contributing
