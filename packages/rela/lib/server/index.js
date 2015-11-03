@@ -2,12 +2,12 @@
 
 const net = require('net'),
       tls = require('tls'),
+      EventEmitter = require('events'),
       build = require('./build'),
       encode = require('../encode');
 
 let Server = function(secure){
-  this._bound = {};
-  this._currentKey = 'method';
+  this._connectionListener = ()=>{};
   this._clients = [];
 
   let handler = (socket) => {
@@ -16,7 +16,6 @@ let Server = function(secure){
       'id': this._clients.length,
       'shook': false,
       'shaking': false,
-      'on': socket.on.bind(socket),
       'write': function(input){
         if (typeof input === 'object' && !(input instanceof Buffer)) {
           if (this.shook) this.socket.write(encode(JSON.stringify(input)));
@@ -26,7 +25,20 @@ let Server = function(secure){
           else this.socket.write(input);
         }
       },
-      'end': socket.end.bind(socket)
+      'end': socket.end.bind(socket),
+      _domains: {'method': new EventEmitter()},
+      _currentKey: 'method',
+      use:function(key){
+        this._currentKey = key;
+        if (typeof this._domains[key] === 'undefined') this._domains[key] = new EventEmitter();
+        return this;
+      },
+      on: function(){
+        return this._domains[this._currentKey].on.apply(this._domains[this._currentKey], arguments);
+      },
+      emit: function(){
+        return this._domains[this._currentKey].emit.apply(this._domains[this._currentKey], arguments);
+      }
     };
 
     this._clients.push(client);
@@ -39,18 +51,12 @@ let Server = function(secure){
   this._server.on('connection', handler);
 };
 
-Server.prototype.use = function(key){
-  this._currentKey = key;
-  return this;
+Server.prototype.connection = function(call){
+  this._connectionListener = call || ()=>{};
 };
 
-Server.prototype.on = function(data, callback){
-  if (typeof this._bound[this._currentKey] !== 'undefined')
-    this._bound[this._currentKey].push({'data': data, 'callback': callback});
-  else
-    this._bound[this._currentKey] = [{'data': data, 'callback': callback}];
-
-  return this;
+Server.prototype.listen = function(){
+  this._server.listen.apply(this._server, arguments);
 };
 
 module.exports = Server;
