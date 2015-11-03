@@ -7,7 +7,7 @@ module.exports = function(){
   let wsdecoded = '';
 
   console.time('decode');
-  wsdecoded = decode(wsencoded)
+  wsdecoded = decode(wsencoded);
   console.timeEnd('decode');
 
   console.log('From: ' + wsencoded.toString());
