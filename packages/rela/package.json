@@ -1,6 +1,6 @@
 {
   "name": "rela",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Create and manage a independent WebSocket server for API systems.",
   "main": "index.js",
   "scripts": {
