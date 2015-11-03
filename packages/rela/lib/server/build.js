@@ -14,7 +14,9 @@ module.exports = function(client){
     }
   });
 
-  client.socket.on('end', () => {
+  client.socket.on('close', () => {
+    client.emit('disconnect');
+    this.emit('disconnection');
     this.clients.slice(client.id, 1);
     client.socket.destroy();
   });
