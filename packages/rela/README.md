@@ -4,20 +4,9 @@ Create and manage independent WebSocket and WSS servers for API systems.  Based 
 
 ## Installation
 
-Via npm:
 ```
 $ npm install rela
 ```
-
-Or you can clone it and require it:
-
-```
-git clone https://github.com/soundcove/rela.git
-```
-
-```javascript
-const rela = require('./rela');
-// ...
 ```
 
 ## Why not [Socket.io][socket.io]?
