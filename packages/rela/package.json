@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/soundcove/rela.git"
+    "url": "git+https://github.com/jamen/rela.git"
   },
   "keywords": [
     "web",
     "sockets",
     "api"
   ],
-  "author": "SoundCove Developer Team",
+  "author": "Jamen Marz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/soundcove/rela/issues"
+    "url": "https://github.com/soundcove/jamen/issues"
   },
-  "homepage": "https://github.com/soundcove/rela#readme"
+  "homepage": "https://github.com/jamen/rela#readme"
 }
