@@ -13,5 +13,5 @@
   "loopfunc": true,
   "latedef": false,
   "jasmine": true,
-  "globals": [ "jest" ]
+  "globals": { "jest": true }
 }
