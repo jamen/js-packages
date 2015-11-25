@@ -1,0 +1,27 @@
+{
+  "name": "to-rpv",
+  "version": "0.0.0",
+  "description": "Parse normal CSS to a RPV tree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/to-rpv.git"
+  },
+  "keywords": [
+    "rpv",
+    "css",
+    "parser"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/to-rpv/issues"
+  },
+  "homepage": "https://github.com/jamen/to-rpv#readme",
+  "dependencies": {
+    "rpv": "latest"
+  }
+}
