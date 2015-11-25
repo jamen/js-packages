@@ -21,7 +21,13 @@
     "url": "https://github.com/jamen/to-rpv/issues"
   },
   "homepage": "https://github.com/jamen/to-rpv#readme",
+  "devDependencies": {
+    "jest-cli": "latest"
+  },
   "dependencies": {
     "rpv": "latest"
+  },
+  "jest": {
+    "testDirectoryName": "test"
   }
 }
