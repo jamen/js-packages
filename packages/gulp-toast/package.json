@@ -21,11 +21,9 @@
     "url": "https://github.com/jamen/gulp-toast/issues"
   },
   "dependencies": {
+    "gulp": "*",
     "refig": "*",
     "through2": "*"
-  },
-  "devDependencies": {
-    "gulp": "*"
   },
   "homepage": "https://github.com/jamen/gulp-toast#readme"
 }
