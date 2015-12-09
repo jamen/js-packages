@@ -38,3 +38,8 @@ gulp.task('...', function(){
 ## Options
  - `main`: The `.toast` file.
  - `entry`: The folder to generate the files in.
+
+## Smart things to do
+
+ - [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) (on `post-merge`): Useful if you're setting up a `"ignore"` field, so it will automatically generate a all your toast files.
+ - [npm  script](https://docs.npmjs.com/misc/scripts) (`install`): This way people just have to `npm install` to generate configuration files... (which they will inevitably do if you have dependences)
