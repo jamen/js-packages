@@ -1,0 +1,20 @@
+{
+
+  "jshint": {
+    "node": true,
+    "esnext": true,
+    "camelcase": true,
+    "eqeqeq": true,
+    "indent": 2,
+    "latedef": true,
+    "newcap": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": true,
+    "eqnull": true,
+    "loopfunc": true,
+    "latedef": false,
+    "jasmine": true
+  }
+
+}

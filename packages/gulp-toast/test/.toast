@@ -1,3 +1,6 @@
 {
-  ".testrc": { "foo": "bar" }
+  ".jshintrc": {
+    "node": true,
+    "globals": { "test": true }
+  }
 }

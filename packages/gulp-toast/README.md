@@ -15,7 +15,6 @@ Then put all your configurations in `.toast`:
   ".jshintrc": { ... },
   ".babelrc": { ... },
   ".bowerrc": { ... },
-  ".gitignore": [ ... ],
   ".npmignore": [ ... ],
 }
 ```
