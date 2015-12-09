@@ -55,5 +55,5 @@ exports._map = {
   'jshint': '.jshintrc',
   'babel': '.babelrc',
   'bower': '.bowerrc',
-  'ignore': '.gitignore'
+  'ignore': '.npmignore'
 };
