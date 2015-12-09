@@ -12,21 +12,29 @@ Then put all your configurations in `.toast`:
 
 ```javascript
 {
-  ".jshintrc": { ... }
-  ".babelrc": { ... }
-  ".bowerrc": { ... }
+  ".jshintrc": { ... },
+  ".babelrc": { ... },
+  ".bowerrc": { ... },
+  ".gitignore": [ ... ],
+  ".npmignore": [ ... ],
 }
 ```
 
-You can even use Arrays or strings for plain-text:
+## Usage
+
+Simply pipe a configuration file into `toast()`.
 
 ```javascript
-{
-  // ...
-  ".gitignore": [
-    "# misc",
-    ".DS_Store"
-  ]
-  // ...
-}
+const gulp = require('gulp'),
+      toast = require('gulp-toast');
+
+gulp.task('...', function(){
+  gulp
+    .src('some/.toast')
+    .pipe(toast({ /* options */ }));
+});
 ```
+
+## Options
+ - `main`: The `.toast` file.
+ - `entry`: The folder to generate the files in.
