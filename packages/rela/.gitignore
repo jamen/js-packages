@@ -1,4 +1,3 @@
 node_modules
+.*rc
 .DS_Store
-._*
-*.log
