@@ -4,13 +4,15 @@ const Rela = require('./lib'),
       info = require('./package.json');
 
 /* index.js
- * Library initialization and package information.
+ * Server initialization and package information.
  * * */
 
-// Initialize new library.
-module.exports = exports = new Rela();
+// Library initializer
+module.exports = exports = function(){
+  return new Rela();
+};
 
-// Raw object accessor.
+// Raw server accessor.
 exports.Rela = Rela;
 
 // Meta
