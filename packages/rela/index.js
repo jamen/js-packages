@@ -8,8 +8,8 @@ const Rela = require('./lib'),
  * * */
 
 // Library initializer
-module.exports = exports = function(){
-  return new Rela();
+module.exports = exports = function(opts){
+  return new Rela(opts);
 };
 
 // Raw server accessor.
