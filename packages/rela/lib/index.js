@@ -1,16 +1,18 @@
 'use strict';
 
 /* lib/index.js
- * Library object.
+ * Server object.
  * * */
 
-// Export library
+// Export server
 module.exports = Rela;
 
+// The server object, Rela.
 function Rela(){
   // Shorthand, no "new" required.
   if (!(this instanceof Rela))
     return new Rela(...arguments);
+
 
 }
 
