@@ -11,7 +11,7 @@ module.exports = exports = function(){
 exports._headers = function(raw){
   if (raw instanceof Buffer) raw = raw.toString('utf-8');
   let chunks = raw.split(/\r?\n/),
-      headers = {}, chunk = null,
+      headers = { 0:chunks[0] }, chunk = null,
       toObj = /^(.+?):\s?/;
 
   for (let i = 1; i < chunks.length; i++) {
@@ -19,5 +19,5 @@ exports._headers = function(raw){
     headers[chunk[1].toLowerCase()] = chunk[2];
   }
 
-  return Object.assign(chunks[0], headers);
+  return headers;
 };
