@@ -5,7 +5,7 @@ const lib = require('./lib'),
       Server = lib.Server;
 
 /* index.js
- * Server initialization and package information.
+ * Server initialization, library, and package information.
  * * */
 
 // Library initializer
