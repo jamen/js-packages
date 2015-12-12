@@ -5,7 +5,7 @@ Create and manage independent WebSocket and WSS servers for API systems.  Based 
 ## Installation
 
 ```
-$ npm install rela
+$ npm install --save rela
 ```
 
 ## Why not [Socket.io][socket.io]?
