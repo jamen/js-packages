@@ -8,5 +8,6 @@ const Client = require('./client');
 
 module.exports = function(socket){
   let client = new Client(socket);
+  this.clients.push(client);
   this.emit('connection', client);
 };
