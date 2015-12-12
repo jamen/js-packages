@@ -1,6 +1,6 @@
 'use strict';
 
-const Server = require('net').Server,
+const SocketServer = require('net').Server,
       EventEmitter = require('events'),
       handler = require('./handler');
 
@@ -9,25 +9,25 @@ const Server = require('net').Server,
  * * */
 
 // Export server.
-module.exports = Rela;
+module.exports = Server;
 
 // The server object, Rela.
-function Rela(opts){
+function Server(opts){
   // Shorthand, no "new" required.
-  if (!(this instanceof Rela))
-    return new Rela(...arguments);
+  if (!(this instanceof Server))
+    return new Server(...arguments);
 
   if (typeof opts !== 'object')
     opts = {};
 
   this.clients = opts.dummies || [];
-  this.server = opts.server || new Server(handler.bind(this));
+  this.server = opts.server || new SocketServer(handler.bind(this));
 }
 
 // Add EventEmitter functionality to all Rela instances.
-Rela.prototype = new EventEmitter();
+Server.prototype = new EventEmitter();
 
 // Shorthand listen.
-Rela.prototype.listen = function(){
+Server.prototype.listen = function(){
   this.server.listen(...arguments);
 };
