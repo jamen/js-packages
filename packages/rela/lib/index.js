@@ -15,6 +15,8 @@ function Rela(opts){
 
   if (typeof opts !== 'object')
     opts = {};
+
+  this.clients = opts.dummies || [];
 }
 
 // Add EventEmitter functionality to all Rela instances.
