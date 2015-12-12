@@ -6,6 +6,7 @@ const Client = require('client');
  * Handles net socket connections for rela.
  * * */
 
-module.exports = function(socket){
+module.exports = (socket) => {
   let client = new Client(socket);
+  this.emit('connection', client);
 };
