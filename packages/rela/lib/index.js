@@ -21,7 +21,7 @@ function Rela(opts){
     opts = {};
 
   this.clients = opts.dummies || [];
-  this.server = opts.server || new Server(handler);
+  this.server = opts.server || new Server(handler.bind(this));
 }
 
 // Add EventEmitter functionality to all Rela instances.
