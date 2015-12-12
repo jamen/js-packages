@@ -1,10 +1,13 @@
 'use strict';
 
+const Server = require('net').Server,
+      handler = require('./handler');
+
 /* lib/index.js
  * Server object.
  * * */
 
-// Export server
+// Export server.
 module.exports = Rela;
 
 // The server object, Rela.
@@ -17,7 +20,13 @@ function Rela(opts){
     opts = {};
 
   this.clients = opts.dummies || [];
+  this.server = opts.server || new Server(handler);
 }
 
 // Add EventEmitter functionality to all Rela instances.
 Rela.prototype = require('events').EventEmitter;
+
+// Shorthand listen.
+Rela.prototype.listen = function(){
+  this.server.listen(...arguments);
+};
