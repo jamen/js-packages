@@ -1,22 +1,23 @@
 'use strict';
 
 const Rela = require('./lib'),
-      info = require('./package.json');
+      info = require('./package');
 
 /* index.js
  * Server initialization and package information.
  * * */
 
 // Library initializer
-module.exports = exports = function(opts){
+let rela = function(opts){
   return new Rela(opts);
 };
 
 // Raw server accessor.
-exports.Rela = Rela;
+rela.Rela = Rela;
 
 // Meta
-exports.name = info.name;
-exports.version = info.version;
-exports.author = info.author;
-exports.license = info.license;
+rela.version = info.version;
+rela.author = info.author;
+rela.license = info.license;
+
+module.exports = rela;
