@@ -1,7 +1,8 @@
 'use strict';
 
-const Rela = require('./lib'),
-      info = require('./package');
+const lib = require('./lib'),
+      info = require('./package'),
+      Server = lib.Server;
 
 /* index.js
  * Server initialization and package information.
@@ -9,15 +10,16 @@ const Rela = require('./lib'),
 
 // Library initializer
 let rela = function(opts){
-  return new Rela(opts);
+  return new Server(opts);
 };
 
-// Raw server accessor.
-rela.Rela = Rela;
+// Library access
+Object.assign(rela, lib);
 
 // Meta
 rela.version = info.version;
 rela.author = info.author;
 rela.license = info.license;
 
+// Export
 module.exports = rela;
