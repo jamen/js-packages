@@ -13,7 +13,8 @@ function Rela(opts){
   if (!(this instanceof Rela))
     return new Rela(...arguments);
 
-  if (typeof opts !== 'object') opts = {};
+  if (typeof opts !== 'object')
+    opts = {};
 }
 
 // Add EventEmitter functionality to all Rela instances.
