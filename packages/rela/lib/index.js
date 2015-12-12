@@ -1,6 +1,7 @@
 'use strict';
 
 const Server = require('net').Server,
+      EventEmitter = require('events'),
       handler = require('./handler');
 
 /* lib/index.js
@@ -24,7 +25,7 @@ function Rela(opts){
 }
 
 // Add EventEmitter functionality to all Rela instances.
-Rela.prototype = require('events').EventEmitter;
+Rela.prototype = new EventEmitter();
 
 // Shorthand listen.
 Rela.prototype.listen = function(){
