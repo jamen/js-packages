@@ -9,6 +9,8 @@ module.exports = Client;
 function Client(socket){
   if (typeof socket !== 'object')
     throw new Error('Clients can only bind to Sockets');
+
+  this._socket = socket;
 }
 
 Client.prototype = require('events').EventEmitter;
