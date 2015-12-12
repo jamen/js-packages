@@ -1,6 +1,6 @@
 'use strict';
 
-const Client = require('client');
+const Client = require('./client');
 
 /* lib/handler.js
  * Handles net socket connections for rela.
