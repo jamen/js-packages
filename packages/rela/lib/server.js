@@ -4,7 +4,7 @@ const Server = require('net').Server,
       EventEmitter = require('events'),
       handler = require('./handler');
 
-/* lib/index.js
+/* lib/server.js
  * Server object.
  * * */
 
