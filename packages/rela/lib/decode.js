@@ -11,7 +11,8 @@ module.exports = function(raw){
   let message = [],
       data = {};
 
-  // TODO: decode
+  data.fin = !!(128 & raw[0]);
+  data.rsv = [!!(64 & raw[0]), !!(32 & raw[0]), !!(16 & raw[0])];
 
   return Object.assign(new Buffer(message).toString(), data);
 };
