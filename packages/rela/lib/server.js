@@ -3,7 +3,8 @@
 const SocketServer = require('net').Server,
       EventEmitter = require('events'),
       Client = require('./client'),
-      handshake = require('./handshake');
+      handshake = require('./handshake'),
+      message = require('./message');
 
 /* lib/server.js
  * Server object.
@@ -28,7 +29,10 @@ function Server(opts){
     this.clients.push(client);
     this.emit('connection', client);
 
-    client._socket.on('data', handshake.bind(client));
+    client._socket.once('data', handshake.bind(client));
+    client.on('handshake-done', () => {
+      client._socket.on('data', message.bind(client));
+    });
   });
 }
 
