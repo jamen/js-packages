@@ -2,7 +2,8 @@
 
 const SocketServer = require('net').Server,
       EventEmitter = require('events'),
-      handler = require('./handler');
+      Client = require('./client'),
+      handshake = require('./handshake');
 
 /* lib/server.js
  * Server object.
@@ -21,7 +22,14 @@ function Server(opts){
     opts = {};
 
   this.clients = opts.dummies || [];
-  this.server = opts.server || new SocketServer(handler.bind(this));
+
+  this.server = opts.server || new SocketServer(socket => {
+    let client = new Client(socket);
+    this.clients.push(client);
+    this.emit('connection', client);
+
+    client._socket.on('data', handshake.bind(client));
+  });
 }
 
 // Add EventEmitter functionality to all Rela instances.
