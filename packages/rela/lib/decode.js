@@ -31,5 +31,5 @@ module.exports = function(raw){
     message += String.fromCharCode(raw[r + i] ^ data.keys[i % 4]);
   }
 
-  return Object.assign(new Buffer(message).toString(), data);
+  return [new Buffer(message).toString(), data];
 };

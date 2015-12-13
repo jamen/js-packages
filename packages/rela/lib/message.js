@@ -7,9 +7,10 @@ const decode = require('./decode');
  * * */
 
 module.exports = function(data){
-  let message = decode(data);
+  let message = decode(data),
+      type = exports._opts[message.opt] || 'unknown';
 
-
+  this.emit(type, message + '', type);
 };
 
 exports._opts = [
