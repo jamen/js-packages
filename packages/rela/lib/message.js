@@ -10,12 +10,13 @@ module.exports = function(data){
   let message = decode(data),
       event = exports._evt[message[0].opt] || 'unknown';
 
+  this.emit('data', message[0], message[1]);
   this.emit(event, message[0], message[1]);
 };
 
 exports._evt = [
   'stream',
-  'data',
+  'text',
   'binary',
   '_reserved',
   '_reserved',
