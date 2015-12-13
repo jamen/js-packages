@@ -39,6 +39,11 @@ function Server(opts){
 // Add EventEmitter functionality to all Rela instances.
 Server.prototype = new EventEmitter();
 
+// Load middleware
+Server.prototype.use = function(middleware){
+  middleware(this);
+};
+
 // Shorthand listen.
 Server.prototype.listen = function(){
   this.server.listen(...arguments);
