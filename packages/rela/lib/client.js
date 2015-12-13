@@ -1,5 +1,7 @@
 'use strict';
 
+const EventEmitter = require('events');
+
 /* lib/client.js
  * The Client object.
  * * */
@@ -14,7 +16,7 @@ function Client(socket){
   this.state = 'start';
 }
 
-Client.prototype = require('events').EventEmitter;
+Client.prototype = new EventEmitter();
 
 Client.prototype.send = function(data){
   if (typeof data === 'object') data = JSON.stringify(data);
