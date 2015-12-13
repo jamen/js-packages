@@ -8,14 +8,14 @@ const decode = require('./decode');
 
 module.exports = function(data){
   let message = decode(data),
-      type = exports._opts[message.opt] || 'unknown';
+      event = exports._evt[message[0].opt] || 'unknown';
 
-  this.emit(type, message + '', type);
+  this.emit(event, message[0], message[1]);
 };
 
-exports._opts = [
+exports._evt = [
   'stream',
-  'text',
+  'data',
   'binary',
   '_reserved',
   '_reserved',
