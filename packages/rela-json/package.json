@@ -1,0 +1,21 @@
+{
+  "name": "rela-json",
+  "version": "0.0.0",
+  "description": "JSON-event middleware for rela.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/rela-json.git"
+  },
+  "keywords": [
+    "rela",
+    "json",
+    "events"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/rela-json/issues"
+  },
+  "homepage": "https://github.com/jamen/rela-json#readme"
+}
