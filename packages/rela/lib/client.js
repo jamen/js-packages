@@ -11,6 +11,7 @@ function Client(socket){
     throw new Error('Clients can only bind to Sockets');
 
   this._socket = socket;
+  this.state = 'start';
 }
 
 Client.prototype.send = function(data){
