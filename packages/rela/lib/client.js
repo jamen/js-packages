@@ -13,4 +13,9 @@ function Client(socket){
   this._socket = socket;
 }
 
+Client.prototype.send = function(data){
+  if (typeof data === 'object') data = JSON.stringify(data);
+  this._socket.write(data);
+};
+
 Client.prototype = require('events').EventEmitter;
