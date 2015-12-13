@@ -41,7 +41,7 @@ Server.prototype = new EventEmitter();
 
 // Load middleware
 Server.prototype.use = function(middleware){
-  middleware(this);
+  middleware(this, Server, Client);
 };
 
 // Shorthand listen.
