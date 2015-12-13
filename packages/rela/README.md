@@ -8,6 +8,9 @@ Create and manage independent WebSocket and WSS servers for API systems.  Based 
 $ npm install --save rela
 ```
 
+## Documentation
+Please see [the repo's Wiki][wiki] for documentation on how to use Rela.
+
 ## Why not [Socket.io][socket.io]?
 Socket.io is a great platform, masterfully made...  However there are 3 things that didn't suit our service, and I can imagine don't suit other services.  So we decided to create our own library.
 
@@ -18,9 +21,6 @@ Socket.io is a great platform, masterfully made...  However there are 3 things t
 So with all these in mind, we designed Rela to be the counterpart to Socket.io.
 
 By no means is Rela better than Socket.io.  I just believe Socket.io was designed with a different train of thought.  Applications vs API systems.
-
-## Documentation
-Please see [the repo's Wiki][wiki] for documentation on how to use Rela.
 
 ## Contributing
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) for a guide on how to contribute to Rela.
