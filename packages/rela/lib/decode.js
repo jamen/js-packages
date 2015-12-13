@@ -13,5 +13,5 @@ module.exports = function(raw){
 
   // TODO: decode
 
-  return Object.assign(new Buffer(message), data);
+  return Object.assign(new Buffer(message).toString(), data);
 };
