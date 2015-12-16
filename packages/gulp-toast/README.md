@@ -1,3 +1,5 @@
+# Project abandoned (see [gulp-xa](https://github.com/jamen/gulp-xa))
+
 toast
 =====
 [gulp-toast](http://npmjs.com/gulp-toast) allows you to centralize your project's JSON/plain-text configurations (`*rc` files and more) into one location, a `.toast` file.  It then uses gulp to compile into their appropriate configurations.
