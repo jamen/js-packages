@@ -1,3 +1,4 @@
+# Project abandon (see [refig](https://github.com/jamen/refig))
 # json-config-reader
 
 **This package has been replaced by [refig](https://github.com/iora/refig), although it still can be used, refig is recommended.**
