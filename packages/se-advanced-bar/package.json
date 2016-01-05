@@ -1,0 +1,24 @@
+{
+  "name": "se-advanced-bar",
+  "version": "0.0.0",
+  "description": "StackExchange advanced bar.",
+  "main": "index.js",
+  "private": true,
+  "author": "Jamen Marzonie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/se-advanced-bar/issues"
+  },
+  "homepage": "https://github.com/jamen/se-advanced-bar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/se-advanced-bar.git"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-preset-es2015": "^6.3.13",
+    "bower": "^1.7.2",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.0.0"
+  }
+}
