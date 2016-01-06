@@ -1,0 +1,25 @@
+{
+  "name": "Advanced Bar",
+  "author": "Jamen Marzonie",
+  "version": "0.0.0",
+  "description": "An advanced bar for Stack Exchange sites.",
+  "manifest_version": 2,
+  "icons": {},
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": [
+      "*://*.stackoverflow.com/*",
+      "*://*.stackexchange.com/*",
+      "*://*.askubuntu.com/*",
+      "*://*.serverfault.com/*",
+      "*://*.superuser.com/*",
+      "*://*.mathoverflow.net/*"
+    ],
+    "css": [ "out/app.css" ],
+    "js": [
+      "bower_components/vue/dist/vue.min.js",
+      "bower_components/jquery/dist/jquery.min.js",
+      "out/app.js"
+    ]
+  }]
+}
