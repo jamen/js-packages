@@ -13,3 +13,11 @@ js:
 
 css:
 	$(stylus) src/app.styl -o out
+
+dist:
+	mkdir dist
+	cp -r out dist/out
+	cp -r bower_components dist/bower_components
+	cp manifest.json dist/manifest.json
+	cp LICENSE dist/LICENSE
+	cp README.md dist/README.md
