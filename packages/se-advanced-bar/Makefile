@@ -21,3 +21,4 @@ dist:
 	cp manifest.json dist/manifest.json
 	cp LICENSE dist/LICENSE
 	cp README.md dist/README.md
+	zip -r dist.zip dist
