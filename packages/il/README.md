@@ -10,7 +10,7 @@ for (let i of il(5)) {
 
 ## Installation
 ```shell
-$ npm install your-project
+$ npm install --save li
 ```
 
 ## Credits
