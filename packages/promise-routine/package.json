@@ -1,7 +1,7 @@
 {
   "name": "promise-routine",
   "author": "Jamen Marzonie",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Wrap a routine of Promise functions in Promise.all",
   "main": "lib",
   "repository": {
