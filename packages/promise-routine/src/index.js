@@ -7,7 +7,7 @@ function routine(fn, ...sets) {
   const master = [];
 
   for (const args of sets) {
-    master.push(fn(...args));
+    master.push(fn.apply(fn, Array.isArray(args) ? args : [args]));
   }
   return Prom.all.call(Prom, master);
 }
