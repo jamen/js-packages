@@ -1,11 +1,19 @@
-'use strict';
+import test from 'ava';
+import common from '../lib';
 
-const guru = require('guru');
-const common = require('../lib');
+test('integer', t => {
+  console.log(common);
+  t.pass();
+});
 
-const Parser = guru.Parser;
+test('string', t => {
+  t.pass();
+});
 
-const foo = new Parser(common.lexing.all);
-foo.parse('0x12 ** 0b11011001').then(res => {
-  console.log(res[0]);
-}, err => console.trace(err));
+test('whitespace', t => {
+  t.pass();
+});
+
+test('arithmetic', t => {
+  t.pass();
+});
