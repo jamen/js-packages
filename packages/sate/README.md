@@ -1,5 +1,6 @@
 # Sate
 > Small utility for generator-based iteration stacking.
+
 Sate allows you to iterate an array (or something linear) and stack (`yield`) items in a new location.
 ```javascript
 const sate = require('sate');
