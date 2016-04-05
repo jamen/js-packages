@@ -2,7 +2,7 @@
   "name": "sate",
   "author": "Jamen Marzonie",
   "version": "1.0.0",
-  "description": "A generator-based utility library.",
+  "description": "Small utility for generator-based iteration stacking.",
   "main": "index.js",
   "repository": {
     "type": "git",
