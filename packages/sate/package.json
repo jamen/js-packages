@@ -1,7 +1,7 @@
 {
   "name": "sate",
   "author": "Jamen Marzonie",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Small utility for generator-based iteration stacking.",
   "main": "index.js",
   "repository": {
