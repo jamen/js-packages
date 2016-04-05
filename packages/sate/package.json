@@ -1,7 +1,7 @@
 {
   "name": "sate",
   "author": "Jamen Marzonie",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A generator-based utility library.",
   "main": "index.js",
   "repository": {
