@@ -29,6 +29,7 @@
     "gulp-eslint": "^2.0.0"
   },
   "dependencies": {
-    "hmu-plugin": "^0.2.0"
+    "hmu-plugin": "^0.2.0",
+    "promise-routine": "^1.0.0"
   }
 }
