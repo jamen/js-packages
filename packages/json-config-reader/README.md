@@ -1,4 +1,6 @@
-# Project abandoned (see [refig](https://github.com/jamen/refig))
+# Archived: Project Abandoned
+This project has been abandoned in favor of [`refig`](https://github.com/jamen/refig) and [`rc`](https://npmjs.com/rc)
+
 # json-config-reader
 
 **This package has been replaced by [refig](https://github.com/iora/refig), although it still can be used, refig is recommended.**
