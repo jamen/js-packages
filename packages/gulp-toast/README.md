@@ -1,4 +1,5 @@
-# Project abandoned (see [gulp-xa](https://github.com/jamen/gulp-xa))
+# Archived: Project Abandoned
+This project has been abandoned in favor of [`gulp-xa`](https://github.com/jamen/gulp-xa)
 
 toast
 =====
