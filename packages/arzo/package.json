@@ -1,0 +1,39 @@
+{
+  "name": "arzo",
+  "version": "0.0.0",
+  "description": "An experimental component idea.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js gulpfile.js observe.js test; tape 'test/*.js'",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/arzo.git"
+  },
+  "keywords": [
+    "components",
+    "simple",
+    "lightweight"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/arzo/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/jamen/arzo#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "eslint": "^2.9.0",
+    "eslint-config-google": "^0.5.0",
+    "gulp": "^3.9.1",
+    "tape": "^4.5.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "extending": "^0.2.0"
+  }
+}
