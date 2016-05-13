@@ -1,0 +1,29 @@
+{
+  "name": "neta-message",
+  "version": "0.0.0",
+  "description": "Encode and decode Neta messages.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/neta-message.git"
+  },
+  "keywords": [
+    "neta",
+    "message",
+    "encode",
+    "decode"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "methods.json"
+  ],
+  "bugs": {
+    "url": "https://github.com/jamen/neta-message/issues"
+  },
+  "homepage": "https://github.com/jamen/neta-message#readme",
+  "dependencies": {
+    "uuid": "^2.0.2"
+  }
+}
