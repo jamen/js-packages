@@ -1,6 +1,6 @@
 {
   "name": "neta-message",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Encode and decode Neta messages.",
   "main": "index.js",
   "repository": {
