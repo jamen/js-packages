@@ -26,7 +26,7 @@ exports.encode = function encode(type, body, id) {
     uuid.v4(n, message);
   }
   message.writeInt16LE(readtype[1], 16);
-  message.write(body, 18);
+  message.copy(body, 0, 18);
   return message;
 };
 
