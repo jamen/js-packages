@@ -1,0 +1,27 @@
+{
+  "name": "hmu-core",
+  "author": "Jamen Marzonie",
+  "version": "0.0.0",
+  "description": "The core for hmu.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamen/hmu-core"
+  },
+  "scripts": {
+    "test": "tape test"
+  },
+  "private": false,
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "eslint-config-google": "^0.5.0",
+    "tape": "^4.5.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "promise-circuit": "^0.2.0"
+  }
+}
