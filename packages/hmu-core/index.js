@@ -22,7 +22,9 @@ exports = module.exports = function hmu(runs) {
   }
 
   return proc.then(function(last) {
-    if (!last || last.constructor !== Array) {
+    if (last && last.constructor === Array) {
+      output.push.apply(output, last);
+    } else {
       output.push(last);
     }
     return output;
