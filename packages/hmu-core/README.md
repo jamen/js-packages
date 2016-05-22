@@ -32,6 +32,30 @@ A `run` is an object with a `plugin`, some `input`, and `options`.  For example:
 ```
 The `plugin` processes the `input` and gives an output, and `options` allow you to change behavior inside of the plugin.
 
+### A `plugin`
+A plugin is a function that returns a `Promise` object or value, it runs with `input` and `options`.
+
+Here is an example of an asynchronous plugin using a `Promise`:
+```javascript
+function plugin(input, options) {
+  return new Promise(function(resolve, reject) {
+    fs.readFile('foo.txt', function(err, data) {
+      if (err) return reject(err);
+      resolve(data.toString());
+    });
+  });
+};
+```
+This plugin reads the file `foo.txt` and returns the contents.
+
+Here is an example of a synchronous plugin using `return`:
+```javascript
+function plugin(input, options) {
+  return Math.pow(input[0], options.exponent || 2);
+}
+```
+This takes the first input, and class `Math.pow` on it, with the exponent being provided via `options.exponent` and defaults to `2`.
+
 ## Credits
 | ![jamen][avatar] |
 |:---:|
