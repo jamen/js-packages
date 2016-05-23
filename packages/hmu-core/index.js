@@ -6,6 +6,10 @@ var pass = function pass(out) {
 
 exports = module.exports = function hmu(runs, transform) {
   runs = runs || [];
+  if (!runs || runs.constructor !== Array) {
+    return Promise.reject(new Error('Must provide array for runs.'));
+  }
+
   transform = transform || pass;
   var output = [];
   var proc = Promise.resolve();

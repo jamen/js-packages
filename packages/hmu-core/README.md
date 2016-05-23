@@ -1,15 +1,18 @@
-# hmu-core
-> The core for hmu.
+# Hit Me Up Core
+> The core plugin runner for Hit Me Up.
+
+The core allows you to run plugins and get their output.  You can transform this output and handle it how you want.
+
+If you are looking for the tool, see [jamen/hmu](https://github.com/jamen/hmu)
 
 ## Installation
 ```shell
-$ npm install hmu-core
+$ npm install --save hmu-core
 ```
 
 ## Usage
 ```javascript
-import hmu from 'hmu-core';
-
+var hmu = require('hmu-core');
 hmu([ ...runs ]);
 ```
 

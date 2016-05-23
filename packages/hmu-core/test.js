@@ -14,7 +14,7 @@ test('hmu-core', function(t) {
 
   var bar = function bar() {
     return new Promise(function(resolve) {
-      resolve('Foo');
+      resolve(['Foo', 'Qux']);
     });
   };
 
@@ -27,6 +27,6 @@ test('hmu-core', function(t) {
     input: ['qux', 'foo'],
     options: {rab: true}
   }]).then(function(results) {
-    t.same(results, ['Baz', 'Foo'], 'output');
+    t.same(results, ['Baz', 'Foo', 'Qux'], 'output');
   });
 });
