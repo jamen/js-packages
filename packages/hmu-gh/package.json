@@ -2,7 +2,7 @@
   "name": "hmu-gh",
   "author": "Jamen Marzonie",
   "version": "2.0.0",
-  "description": "Hit Me Up with GitHub username availability.",
+  "description": "Hit me up with GitHub username availability.",
   "main": "index.js",
   "repository": "jamen/hmu-gh",
   "scripts": {

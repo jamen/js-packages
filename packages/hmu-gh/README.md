@@ -1,5 +1,5 @@
 # Hit Me Up for GitHub
-> Hit Me Up with GitHub username availability.
+> Hit me up with GitHub username availability.
 
 This is a [Hit Me Up][hmu] plugin for checking GitHub username availability.  Useful for checking if organizations are available.
 
