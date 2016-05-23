@@ -1,7 +1,7 @@
 {
   "name": "hmu-gh",
   "author": "Jamen Marzonie",
-  "version": "0.0.0",
+  "version": "0.1.0-0",
   "description": "Check GitHub name availability with Hit Me Up.",
   "main": "index.js",
   "repository": {
