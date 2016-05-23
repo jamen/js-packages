@@ -1,16 +1,14 @@
 # hmu-gh
-> A hmu plugin for checking GitHub name availability.
-
-This is a [`hmu`][hmu] plugin for checking if a name for a user/organization is available on GitHub.
+> Check GitHub name availability with Hit Me Up.
 
 ## Installation
 ```shell
-$ npm install -g hmu-gh
+$ npm install hmu-gh
 ```
 
 ## Usage
-```shell
-$ hmu gh <...names>
+```javascript
+import hmu-gh from 'hmu-gh';
 ```
 
 ## Credits
@@ -20,4 +18,3 @@ $ hmu gh <...names>
 
   [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3&s=125
   [github]: https://github.com/jamen
-  [hmu]: https://github.com/jamen/hmu
