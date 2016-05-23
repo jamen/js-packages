@@ -1,7 +1,7 @@
 {
   "name": "hmu-gh",
   "author": "Jamen Marzonie",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Hit me up with GitHub username availability.",
   "main": "index.js",
   "repository": "jamen/hmu-gh",
