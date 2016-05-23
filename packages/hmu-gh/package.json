@@ -2,18 +2,21 @@
   "name": "hmu-gh",
   "author": "Jamen Marzonie",
   "version": "0.1.0-1",
-  "description": "Check GitHub name availability with Hit Me Up.",
+  "description": "Hit Me Up with GitHub username availability.",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jamen/hmu-gh"
-  },
+  "repository": "jamen/hmu-gh",
   "scripts": {
-    "test": "tape 'test.js' | tap-spec"
+    "test": "eslint index.js test.js && tape test.js | tap-spec"
   },
-  "private": false,
   "files": [
     "index.js"
+  ],
+  "keywords": [
+    "hmu-plugin",
+    "github",
+    "username",
+    "organization",
+    "availability"
   ],
   "devDependencies": {
     "eslint": "^2.10.2",

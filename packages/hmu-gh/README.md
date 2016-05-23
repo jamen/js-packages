@@ -1,14 +1,17 @@
-# hmu-gh
-> Check GitHub name availability with Hit Me Up.
+# Hit Me Up for GitHub
+> Hit Me Up with GitHub username availability.
+
+This is a [Hit Me Up][hmu] plugin for checking GitHub username availability.  Useful for checking if organizations are available.
 
 ## Installation
+For using the on the command line:
 ```shell
-$ npm install hmu-gh
+$ npm install --global hmu-gh
 ```
 
 ## Usage
-```javascript
-import hmu-gh from 'hmu-gh';
+```shell
+$ hmu gh <...names>
 ```
 
 ## Credits
@@ -16,5 +19,9 @@ import hmu-gh from 'hmu-gh';
 |:---:|
 | [Jamen Marzonie][github] |
 
-  [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3&s=125
-  [github]: https://github.com/jamen
+## License
+[MIT](LICENSE) &copy; Jamen Marzonie
+
+[avatar]: https://avatars.githubusercontent.com/u/6251703?v=3&s=125
+[github]: https://github.com/jamen
+[hmu]: https://github.com/jamen/hmu

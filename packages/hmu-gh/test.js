@@ -6,44 +6,19 @@ var gh = require('.');
 test('single name', function(t) {
   t.plan(1);
 
-  nock('https://api.github.com/users')
-  .get('/foobar')
-  .reply(200, {
-    login: 'foobar'
-  });
+  nock('https://api.github.com/users').get('/foobar')
+  .reply(200, {login: 'foobar'});
+
+  nock('https://api.github.com/users').get('/bazqux')
+  .reply(404, {message: 'Not Found'});
 
   hmu([{
     plugin: gh,
-    input: ['foobar']
+    input: ['foobar', 'bazqux']
   }]).then(function(results) {
     t.same(results, [
-      ['github', 'foobar', 'taken']
-    ], 'name is taken');
-  });
-});
-
-test('multiple name', function(t) {
-  t.plan(1);
-
-  nock('https://api.github.com/users')
-  .get('/bazqux')
-  .reply(404, {
-    message: 'Not Found'
-  });
-
-  nock('https://api.github.com/users')
-  .get('/foobar')
-  .reply(200, {
-    login: 'foobar'
-  });
-
-  hmu([{
-    plugin: gh,
-    input: ['bazqux', 'foobar']
-  }]).then(function(results) {
-    t.same(results, [
-      ['github', 'bazqux', 'free'],
-      ['github', 'foobar', 'taken']
-    ], 'name is taken');
+      ['github', 'foobar', 'taken'],
+      ['github', 'bazqux', 'free']
+    ], 'correct output');
   });
 });

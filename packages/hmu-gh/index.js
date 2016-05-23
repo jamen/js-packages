@@ -12,16 +12,7 @@ module.exports = function npmPlugin(input) {
           'User-Agent': 'https://github.com/jamen/hmu-gh'
         }
       }, function(resp) {
-        var collection = [];
-        resp.on('data', function(chunk) {
-          collection.push(chunk);
-        });
-
-        resp.on('end', function() {
-          var data = JSON.parse(Buffer.concat(collection)) || {};
-          var msg = data.message;
-          resolve(['github', name, msg ? 'free' : 'taken']);
-        });
+        resolve(['github', name, resp.statusCode === 404 ? 'free' : 'taken']);
       }).end();
     });
   };
