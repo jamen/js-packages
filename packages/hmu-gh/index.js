@@ -5,7 +5,13 @@ var Promise = require('any-promise');
 module.exports = function npmPlugin(input) {
   var getStatus = function getStatus(name) {
     return new Promise(function(resolve) {
-      request('https://api.github.com/users/' + name, function(resp) {
+      request({
+        hostname: 'api.github.com',
+        path: '/users/' + name,
+        headers: {
+          'User-Agent': 'https://github.com/jamen/hmu-gh'
+        }
+      }, function(resp) {
         var collection = [];
         resp.on('data', function(chunk) {
           collection.push(chunk);
