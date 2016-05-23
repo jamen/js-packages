@@ -13,8 +13,9 @@ import hmu from 'hmu-core';
 hmu([ ...runs ]);
 ```
 
-### `hmu(runs)`
+### `hmu(runs, transform)`
  - `runs` (`Array`): Array of runs
+ - `transform` (`Function`): Alter each element output.
 
 Returns a promise containing an array of the results of the runs.
 
@@ -55,6 +56,19 @@ function plugin(input, options) {
 }
 ```
 This takes the first input, and class `Math.pow` on it, with the exponent being provided via `options.exponent` and defaults to `2`.
+
+### Transforms
+A transform alters each run's output.
+```javascript
+hmu([{
+  plugin: fetchFullName,
+  input: ['jamenmarz']
+}], function(output) {
+  return output.toUpperCase();
+}).then(function(output) {
+  // => ['JAMEN MARZONIE']
+});
+```
 
 ## Credits
 | ![jamen][avatar] |
