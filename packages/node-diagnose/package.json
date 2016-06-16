@@ -1,12 +1,12 @@
 {
-  "name": "diagnosis",
+  "name": "diagnose",
   "author": "Jamen Marzonie",
-  "version": "0.1.0",
-  "description": "Simple modular diagnostics system.",
+  "version": "0.2.0",
+  "description": "Async and simple diagnostics system.",
   "main": "lib",
-  "repository": "jamen/node-diagnosis",
+  "repository": "jamen/node-diagnose",
   "scripts": {
-    "test": "tape test"
+    "test": "eslint lib test.js && tape test.js | tap-spec"
   },
   "files": [
     "lib"
@@ -19,6 +19,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "each-async": "^1.1.1"
+    "async-each": "^1.0.0"
   }
 }
