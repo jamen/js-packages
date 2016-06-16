@@ -1,0 +1,24 @@
+{
+  "name": "diagnosis",
+  "author": "Jamen Marzonie",
+  "version": "0.0.0",
+  "description": "Simple modular diagnostics system.",
+  "main": "lib",
+  "repository": "jamen/node-diagnosis",
+  "scripts": {
+    "test": "tape test"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "eslint-config-google": "^0.6.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "each-async": "^1.1.1"
+  }
+}
