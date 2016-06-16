@@ -1,7 +1,7 @@
 {
   "name": "diagnose",
   "author": "Jamen Marzonie",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Async and simple diagnostics system.",
   "main": "lib",
   "repository": "jamen/node-diagnose",
