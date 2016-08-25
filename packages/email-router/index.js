@@ -5,8 +5,9 @@ var router = function router(options) {
   var addressAlign = [];
   var routes = [];
 
-  var route = function route(address, args) {
+  var route = function route(address) {
     address = resolve(address);
+    var args = Array.prototype.slice(arguments, 1);
 
     if (!address || addressAlign.indexOf(address) === -1) {
       address = options.default;
