@@ -1,11 +1,11 @@
+var strip = require('css-strip-unit');
+
 module.exports = collapse;
 
 /** @module css-collapse-values
   *
-  * Collapse CSS values into their shortest possible form.  Use the option
-  * `convert` to collapse differently typed values even further.
+  * Collapse CSS values into their shortest possible form.
   *
-  * Example of collapsing values:
   * ```js
   * collapse(['1px', '2px', '1px', '2px']);
   * // => ['1px', '2px']
@@ -13,12 +13,19 @@ module.exports = collapse;
   */
 
 function collapse(v) {
-  if (!(v instanceof Array)) return [];
-  var a = v[0], b = v[1], c = v[2], d = v[3];
+  if (!v || !v.length) return [];
+
+  var r = [];
+  for (var i = v.length; i--;) {
+    if (strip(v[i]) === '0') r[i] = '0';
+    else r[i] = v[i];
+  }
+
+  var a = r[0], b = r[1], c = r[2], d = r[3];
   switch (v.length) {
     case 2: if (a === b) return [a];
     case 3: {
-      if (a === b && b === c) return [b];
+      if (a === b && b === c) return [a];
       if (a === c) return [a, b];
     }
     case 4: {
@@ -26,6 +33,7 @@ function collapse(v) {
       if (a === c && b === d) return [a, b];
       if (b === d) return [a, b, c];
     }
-    default: return v;
   }
+
+  return v;
 };

@@ -1,6 +1,6 @@
 {
   "name": "css-collapse-values",
-  "description": "Collapse CSS values into their shortest form. ",
+  "description": "Collapse CSS values into their shortest form.",
   "version": "0.1.0",
   "homepage": "https://github.com/jamen/css-collapse-values",
   "author": "Jamen Marz (https://github.com/jamen)",
@@ -25,6 +25,7 @@
     "values"
   ],
   "dependencies": {
+    "css-strip-unit": "^0.2.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   }
