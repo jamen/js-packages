@@ -33,7 +33,6 @@ function collapse(v) {
       if (a === c && b === d) return [a, b];
       if (b === d) return [a, b, c];
     }
+    default: return v;
   }
-
-  return v;
 };
