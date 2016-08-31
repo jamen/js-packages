@@ -1,5 +1,5 @@
 var strip = require('css-strip-unit');
-var normalize = require('css-normalize-value');
+var truncate = require('css-truncate-values');
 
 module.exports = collapse;
 
@@ -17,12 +17,12 @@ function collapse(values) {
   if (!values || !values.length) return [];
   var length = values.length;
 
-  // Normalize values
+  // Truncate values
   var replica = [];
   for (var i = length; i--;) {
     var sample = strip(values[i]);
     if (!+sample) replica[i] = '0';
-    else replica[i] = normalize(values[i]);
+    else replica[i] = truncate(values[i]);
   }
 
   // Collapse values

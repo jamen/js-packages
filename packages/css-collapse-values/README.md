@@ -3,6 +3,7 @@
 > Collapse CSS values into their shortest form.
 
 Given property values that behave similar to `margin`:
+
 ```css
 .foo { margin: 10px 5px 10px 5px; }
 /* collapsed: */
@@ -10,6 +11,7 @@ Given property values that behave similar to `margin`:
 ```
 
 Collapse them into their shortest form using this module:
+
 ```js
 const collapse = require('collapse');
 
@@ -32,7 +34,9 @@ $ npm install --save css-collapse-values
 ## API
 
 ### `collapse(values)`
+
 Collapse the values, always returning an array.
+
  - `values` (`Array`): An array of 4 or less CSS number values. (i.e. `['1em', '2em', '1em']`)
 
 ```js
