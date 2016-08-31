@@ -1,7 +1,7 @@
 {
   "name": "css-normalize-value",
   "description": "Normalize CSS numbers while retaining the original value.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jamen/css-normalize-value",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-normalize-value",
