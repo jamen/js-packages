@@ -2,9 +2,9 @@ var strip = require('css-strip-unit');
 
 module.exports = normalize;
 
-/** @module css-normalize-value
+/** @module css-truncate-values
   *
-  * Normalize CSS numbers while retaining the original value.
+  * Truncate CSS numbers while retaining the original value.
   *
   */
 
@@ -18,9 +18,13 @@ function normalize(value) {
 
   var number = strip(value);
   var unit = value.slice(number.length);
+
+  // Truncate CSS number.
   number = parseFloat(number).toString();
   var extra = number.indexOf('0.');
   if (extra === 0) return number.slice(1) + unit;
   if (extra === 1 && number[0] === '-') return '-' + number.slice(2) + unit;
+
+  // Return truncated number with unit.
   return number + unit;
 };

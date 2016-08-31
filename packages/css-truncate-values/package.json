@@ -1,12 +1,12 @@
 {
-  "name": "css-normalize-value",
-  "description": "Normalize CSS numbers while retaining the original value.",
+  "name": "css-truncate-values",
+  "description": "Truncate CSS numbers while retaining the original value.",
   "version": "0.1.1",
-  "homepage": "https://github.com/jamen/css-normalize-value",
+  "homepage": "https://github.com/jamen/css-truncate-values",
   "author": "Jamen Marz (https://github.com/jamen)",
-  "repository": "jamen/css-normalize-value",
+  "repository": "jamen/css-truncate-values",
   "bugs": {
-    "url": "https://github.com/jamen/css-normalize-value/issues"
+    "url": "https://github.com/jamen/css-truncate-values/issues"
   },
   "license": "MIT",
   "engines": {
@@ -21,6 +21,6 @@
     "value"
   ],
   "dependencies": {
-    "css-strip-unit": "^0.2.1"
+    "css-strip-unit": "^0.2.2"
   }
 }

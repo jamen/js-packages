@@ -1,15 +1,15 @@
-# css-normalize-value [![NPM version](https://badge.fury.io/js/css-normalize-value.svg)](https://npmjs.org/package/css-normalize-value) [![Build Status](https://travis-ci.org/jamen/css-normalize-value.svg?branch=master)](https://travis-ci.org/jamen/css-normalize-value)
+# css-truncate-values [![NPM version](https://badge.fury.io/js/css-truncate-values.svg)](https://npmjs.org/package/css-truncate-values) [![Build Status](https://travis-ci.org/jamen/css-truncate-values.svg?branch=master)](https://travis-ci.org/jamen/css-truncate-values)
 
-> Normalize CSS numbers while retaining the original value.
+> Truncate CSS numbers while retaining the original value.
 
 ```js
-normalize('0.10em');
+truncate('0.10em');
 // => '.1em'
 
-normalize('010.050ms');
+truncate('010.050ms');
 // => '10.05ms'
 
-normalize(['11.0s', '-06em', '-0.10rem']);
+truncate(['11.0s', '-06em', '-0.10rem']);
 // => ['11s', '-6em', '-.10rem']
 ```
 
@@ -18,21 +18,21 @@ It will return the smallest possible version of any number while retaining the o
 ## Installation
 
 ```sh
-$ npm install --save css-normalize-value
+$ npm install --save css-truncate-values
 ```
 
 ## API
 
-### `normalize(value)`
+### `truncate(values)`
 Remove the inconsistencies from CSS numbers while keeping the same value.
- - `value` (`String`|`Array`) A value or array of values that you want to normalize.
+ - `values` (`String`|`Array`) A value or array of values that you want to truncate.
 
 ```js
-normalize('00.80s');
+truncate('00.80s');
 // => '.8s'
 
-normalize('04px');
-// => '4px'
+truncate(['04px', '0.010px']);
+// => ['4px', '.01px']
 ```
 
 ## License
