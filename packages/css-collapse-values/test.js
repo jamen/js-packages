@@ -22,7 +22,7 @@ test('collapse into triple', function(t) {
 test('collapse zeros', function(t) {
   t.same(collapse(['0px', '0em']), ['0'], 'collapse(["0px", "0em"]) === ["0"]');
   t.same(collapse(['0%', '1rem', '0px']), ['0', '1rem'], 'collapse(["0%", "1rem", "0px"]) === ["0", "1rem"]');
-  t.same(collapse(['0.12em', '0', '12.10px', '0vw']), ['0.12em', '0', '12.10px'], 'collapse(["0.12em", "0", "12.10px", "0vw"]) === ["012.em", "0", "12.10px"]');
+  t.same(collapse(['0.12em', '0', '12.10px', '0vw']), ['.12em', '0', '12.1px'], 'collapse(["0.12em", "0", "12.10px", "0vw"]) === ["12.em", "0", "12.1px"]');
   t.same(collapse(['0em', '0px', '0', '0kHz']), ['0'], 'collapse(["0em", "0px", "0", "0kHz"]) === ["0"]');
   t.end();
 });

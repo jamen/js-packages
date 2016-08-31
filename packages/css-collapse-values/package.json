@@ -25,6 +25,7 @@
     "values"
   ],
   "dependencies": {
+    "css-normalize-value": "^0.1.1",
     "css-strip-unit": "^0.2.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
