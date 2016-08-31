@@ -25,6 +25,8 @@ collapse(['10%', '30%', '10%']);
 // => ['10%', '30%']
 ```
 
+Uses [`css-truncate-values`](https://github.com/jamen/css-truncate-values) to get the shortest possible results.
+
 ## Installation
 
 ```sh
@@ -40,11 +42,18 @@ Collapse the values, always returning an array.
  - `values` (`Array`): An array of 4 or less CSS number values. (i.e. `['1em', '2em', '1em']`)
 
 ```js
-t.same(
-  collapse(['10px', '10px', '10px', '10x']),
-  ['10px']
-);
+collapse(['10px', '10px', '10px', '10px'])
+// => ['10px']
+
+collapse(['-0.10em', '05px', '-0.100em', '5.0px']);
+// => ['-.1em', '5px']
 ```
+
+## Also See
+
+> [postcss-collapse](https://github.com/seanc/postcss-collapse) &em; A postcss version of this.
+> [css-truncate-values](https://github.com/jamen/css-truncate-values) &em; Truncate CSS numbers while retaining the original value.
+> [css-strip-unit](https://github.com/jamen/css-strip-unit) &em; Strip the unit off a CSS number.
 
 ## License
 
