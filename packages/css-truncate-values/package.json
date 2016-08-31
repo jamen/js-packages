@@ -22,5 +22,9 @@
   ],
   "dependencies": {
     "css-strip-unit": "^0.2.2"
+  },
+  "devDependencies": {
+    "tape": "^4.6.0",
+    "tap-spec": "^4.1.1"
   }
 }
