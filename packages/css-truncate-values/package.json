@@ -1,7 +1,7 @@
 {
   "name": "css-truncate-values",
   "description": "Truncate CSS numbers while retaining the original value.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jamen/css-truncate-values",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-truncate-values",
