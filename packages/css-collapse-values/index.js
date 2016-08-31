@@ -1,4 +1,4 @@
-var strip = require('css-strip-unit');
+var strip = require('css-strip-units');
 var truncate = require('css-truncate-values');
 
 module.exports = collapse;

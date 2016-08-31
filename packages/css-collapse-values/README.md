@@ -55,7 +55,7 @@ collapse(['-0.10em', '05px', '-0.100em', '5.0px']);
 >
 > [css-truncate-values](https://github.com/jamen/css-truncate-values): Truncate CSS numbers while retaining the original value.
 >
-> [css-strip-unit](https://github.com/jamen/css-strip-unit): Strip the unit off a CSS number.
+> [css-strip-units](https://github.com/jamen/css-strip-units): Strip the unit off a CSS number.
 
 ## License
 
