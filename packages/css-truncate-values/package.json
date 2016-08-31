@@ -1,0 +1,26 @@
+{
+  "name": "css-normalize-value",
+  "description": "Normalize CSS numbers while retaining the original value.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamen/css-normalize-value",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/css-normalize-value",
+  "bugs": {
+    "url": "https://github.com/jamen/css-normalize-value/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test.js | tap-spec"
+  },
+  "keywords": [
+    "css",
+    "normalize",
+    "value"
+  ],
+  "dependencies": {
+    "css-strip-unit": "^0.2.1"
+  }
+}
