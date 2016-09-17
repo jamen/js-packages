@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-$ npm install --save require-glob
+$ npm install --save jamen/require-glob
 ```
 
 ## Usage
