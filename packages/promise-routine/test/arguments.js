@@ -1,5 +1,5 @@
-import test from 'ava'
-import routine from '../lib'
+const test = require('tape')
+const routine = require('../')
 
 function dummy (a) {
   return Promise.resolve(a)
