@@ -66,20 +66,6 @@ Promise.all([
 
 Returns: `Promise`
 
-#### `routine.Promise`
-The `Promise` that is used internally (defaults to global `Promise`), replace this to use a custom `Promise` object.  Just note that it calls `Promise.all` and `Promise.reject` internally.
-
-Example:
-```javascript
-const routine = require('promise-routine');
-routine.Promise = require('bluebird');
-
-routine(...)
-.delay(...)
-.then(...)
-.cancel(...);
-```
-
 ## Credits
 | ![jamen][avatar] |
 |:---:|

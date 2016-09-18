@@ -3,24 +3,21 @@
   "author": "Jamen Marzonie",
   "version": "1.0.0",
   "description": "Wrap a routine of Promise functions in Promise.all",
-  "main": "lib",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jamen/promise-routine"
-  },
+  "repository": "jamen/promise-routine",
   "scripts": {
-    "test": "eslint lib test; ava"
+    "test": "eslint index.js test && tape 'test/*.js' | tap-spec"
   },
-  "private": false,
   "files": [
-    "lib"
+    "index.js"
   ],
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.12.0",
     "bluebird": "^3.3.4",
-    "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.2",
-    "precommit": "^1.2.0"
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.1",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
   }
 }
