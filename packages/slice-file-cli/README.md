@@ -1,5 +1,4 @@
-# slice-file-cli [![NPM version](https://badge.fury.io/js/slice-file-cli.svg)](https://npmjs.org/package/slice-file-cli) [![Build Status](https://travis-ci.org/jamen/slice-file-cli.svg?branch=master)](https://travis-ci.org/jamen/slice-file-cli)
-
+# slice-file-cli [![NPM version](https://badge.fury.io/js/slice-file-cli.svg)](https://npmjs.org/package/slice-file-cli)
 > Generate a module that manually slices between a given range.
 
 ```sh
