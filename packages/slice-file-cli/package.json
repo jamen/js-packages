@@ -1,7 +1,7 @@
 {
   "name": "slice-file-cli",
   "description": "Generate a module that manually slices between a given range.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/jamen/slice-file-cli",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/slice-file-cli",
