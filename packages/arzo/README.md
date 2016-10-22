@@ -1,4 +1,6 @@
-# Arzo
+**Notice:** This repo is no longer maintained.  Contact me regarding the name or code.
+
+# Arzo (Archived)
 > An experimental component idea.
 
 Using components:
