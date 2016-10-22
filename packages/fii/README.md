@@ -1,4 +1,4 @@
-**Notice:** This repo is no longer maintained.  Contact me regarding the name, code, etc.
+**Notice:** This repo is no longer maintained.  Contact me regarding the name or code.
 
 # Fii (Archived)
 > Install package versions globally and concurrently and symlink them locally.
