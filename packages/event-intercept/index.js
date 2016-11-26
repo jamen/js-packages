@@ -10,16 +10,21 @@ function intercept (emitter, event, handler) {
   // This replaces `emit`, intercepts the events.
   function intercepter (eventName) {
     var data = fargs(arguments, 1)
-    var pass = function (done) { done(null, data) }
     var interceptChain = _intercept[eventName]
     // Pass arguments through intercepts.
-    waterfall([pass].concat(interceptChain), function (err, data) {
-      if (err && err !== true) return emit('error', err)
-      if (err) return
-      // Emit result
+    if (interceptChain) {
+      var pass = function (done) { done(null, data) }
+      waterfall([pass].concat(interceptChain), function (err, data) {
+        if (err && err !== true) return emit('error', err)
+        if (err) return
+        // Emit result
+        data.unshift(eventName)
+        emit.apply(emitter, data)
+      })
+    } else {
       data.unshift(eventName)
       emit.apply(emitter, data)
-    })
+    }
   }
 
   // Add intercepter if not added already.
