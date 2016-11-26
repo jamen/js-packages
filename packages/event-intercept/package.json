@@ -1,7 +1,7 @@
 {
   "name": "event-intercept",
   "description": "Intercept event data before it reaches the listeners.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/jamen/event-intercept",
   "author": "Jamen Marz (https://git.io/)",
   "repository": "jamen/event-intercept",
