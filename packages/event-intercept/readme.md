@@ -39,7 +39,7 @@ Intercepts an event and it's data.  These are executed in the order they are add
 
 ### Handler
 
-The handler has the parameters `(args, done)`, and you call `done` with parameters `(err, args)`.
+The handler has the parameters `(args, done)`, and you call `done` with parameters `(end, args)`.  Where `end` can be `true` (abort safely) or an `Error`.
 
 ### Example
 

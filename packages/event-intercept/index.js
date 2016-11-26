@@ -14,7 +14,8 @@ function intercept (emitter, event, handler) {
     var interceptChain = _intercept[eventName]
     // Pass arguments through intercepts.
     waterfall([pass].concat(interceptChain), function (err, data) {
-      if (err) return emit('error', err)
+      if (err && err !== true) return emit('error', err)
+      if (err) return
       // Emit result
       data.unshift(eventName)
       emit.apply(emitter, data)
