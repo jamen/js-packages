@@ -6,7 +6,7 @@
 var intercept = require('event-intercept')
 var foo = new EventEmitter()
 
-  // Map all data on 'hello' event to uppercase
+// Map all data on 'hello' event to uppercase
 intercept(foo, 'hello', (args, done) => {
   done(null, args.map(data => data.toUpperCase()))
 })
@@ -17,7 +17,7 @@ foo.emit('hello', 'world', 'foo', 'bar')
 // WORLD FOO BAR
 ```
 
-Useful for injecting features on emitters where you want to manipulate the data before it reaches a listener.  Like parsing JSON, logging, debugging, etc.
+Useful for injecting where you want to view/change data before it reaches listeners.  Like parsing, logging, debugging, etc.
 
 ## Installation
 
