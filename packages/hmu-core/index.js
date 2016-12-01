@@ -1,43 +1,44 @@
-var Promise = require('any-promise');
+var pull = require('pull-stream')
+var paramap = require('pull-paramap')
+var values = pull.values
+var collect = pull.collect
 
-var pass = function pass(out) {
-  return out;
-};
+module.exports = hmu
+hmu.stream = stream
+hmu.map = map
 
-exports = module.exports = function hmu(runs, transform) {
-  runs = runs || [];
-  if (!runs || runs.constructor !== Array) {
-    return Promise.reject(new Error('Must provide array for runs.'));
-  }
+var NOOPTIONS = {}
+var NOINPUT = []
+function _noop () {}
 
-  transform = transform || pass;
-  var output = [];
-  var proc = Promise.resolve();
+/**
+ * Run HMU requests and get raw output.
+ * `requests` being an array of objects.
+ *    { target: fn, input: [], options: {} }
+ * `callback` being a function with params (err, res)
+ * `res` being an array of arrays, in order of the requests.
+ * Normally they are just some mapping/reduce of `input`
+ */
+function hmu (requests, callback) {
+  if (!callback) callback = _noop
+  pull(stream(requests), collect(callback))
+}
 
-  var next = function(value) {
-    if (typeof value !== 'undefined') {
-      value = transform(value);
-      if (value && value.constructor === Array) {
-        output.push.apply(output, value);
-      } else {
-        output.push(value);
-      }
-    }
-    return this.plugin(this.input, this.options);
-  };
+/**
+ * Lets me use this as a pull-stream:
+ * ```js
+ * pull(hmu.stream(requests), ...)
+ * ```
+ */
+function stream (requests) {
+  return pull(values(requests), paramap(map))
+}
 
-  for (var i = 0, max = runs.length; i < max; i++) {
-    var run = runs[i];
-    proc = proc.then(next.bind(run));
-  }
-
-  return proc.then(function(last) {
-    last = transform(last);
-    if (last && last.constructor === Array) {
-      output.push.apply(output, last);
-    } else {
-      output.push(last);
-    }
-    return output;
-  });
-};
+/**
+ * Paramap function maps requests to results
+ * Maps `target(input, options, done)` (items of `request`).
+ * Makes plugins highly reusable in this form.
+ */
+function map (req, callback) {
+  req.target(req.input || NOINPUT, req.options || NOOPTIONS, callback)
+}

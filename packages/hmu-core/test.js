@@ -1,32 +1,53 @@
-var test = require('tape');
-var hmu = require('.');
+var test = require('tape')
+var hmu = require('./')
 
-test('hmu-core', function(t) {
-  t.plan(3);
+test('runs multiple generic requests', function (t) {
+  // generic plugins
+  function foo (i,o,c) { c(null, i.map(function(x){return x + '-ness'})) }
+  function bar (i,o,c) { c(null, i.map(function(x){return x + 'ify'})) }
+  function qux (i,o,c) { c(null, i.map(function(x){return 'pull-' + x})) }
 
-  var foo = function foo(input, options) {
-    return new Promise(function(resolve) {
-      t.same(input, ['bar', 'baz'], 'input');
-      t.is(options.qux, true, 'options');
-      resolve('Baz');
-    });
-  };
 
-  var bar = function bar() {
-    return new Promise(function(resolve) {
-      resolve(['Foo', 'Qux']);
-    });
-  };
+  hmu([
+    { target: foo,
+      input: [ 'hello', 'world' ] },
+    { target: bar,
+      input: [ 'foo', 'bar', 'baz' ] },
+    { target: qux,
+      input: [ 'qux', 'idk', 'what' ] },
+    { target: bar,
+      input: [ 'run', 'bar', 'again' ] },
+  ], function (err, res) {
+    if (err) return t.end(err)
+    t.same(res, [
+      [ 'hello-ness', 'world-ness' ],
+      [ 'fooify', 'barify', 'bazify' ],
+      [ 'pull-qux', 'pull-idk', 'pull-what' ],
+      [ 'runify', 'barify', 'againify' ]
+    ], 'expected results')
+    console.log(res)
+    t.end()
+  })
+})
 
-  hmu([{
-    plugin: foo,
-    input: ['bar', 'baz'],
-    options: {qux: true}
-  }, {
-    plugin: bar,
-    input: ['qux', 'foo'],
-    options: {rab: true}
-  }]).then(function(results) {
-    t.same(results, ['Baz', 'Foo', 'Qux'], 'output');
-  });
-});
+test('a request with options', function (t) {
+  function foo (input, opts, cb) {
+    cb(null, input.map(function (x) { return (opts.bar ? 'bar-' : 'foo-') + x }))
+  }
+
+  hmu([
+    { target: foo,
+      input: [ 'hello', 'world' ] },
+    { target: foo,
+      input: ['foo', 'bar', 'qux'],
+      options: { bar: true } },
+  ], function (err, res) {
+    if (err) return t.end(err)
+    t.same(res, [
+      [ 'foo-hello', 'foo-world' ],
+      [ 'bar-foo', 'bar-bar', 'bar-qux' ]
+    ], 'expected results')
+    console.log(res)
+    t.end()
+  })
+})
