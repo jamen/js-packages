@@ -42,8 +42,17 @@ Runs the given [`requests`](#request) and gives the mapped results in `callback`
 
 ```js
 hmu([
-  { target: (input, opts, cb) =>  }
-])
+  { target: require('hmu-npm'),
+    input: [ 'foo', 'bar', 'baz' ] },
+  { target: require('hmu-gh'),
+    input: [ 'foojs', 'barjs', 'bazjs' ],
+    options: { filter: 'free' } }
+], function (err, res) {
+  t.same(res, [
+    [ 'foo taken', 'bar taken', 'baz taken' ],
+    [ 'barjs free', 'bazjs free' ]
+  ])
+})
 ```
 
 ### `request`
