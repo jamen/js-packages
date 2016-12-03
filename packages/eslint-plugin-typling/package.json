@@ -18,11 +18,11 @@
   "keywords": [
     "typling",
     "eslint",
-    "eslint-plugin",
+    "eslintplugin",
     "eslint-plugin-typling",
     "jamen"
   ],
   "dependencies": {
-    "typling-ast": "github:jamen/typling-ast"
+    "typling-ast": "^0.1.0"
   }
 }

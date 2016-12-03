@@ -8,18 +8,18 @@ module.exports = {
           description: "Checks types using comments",
           category: "Typling",
           recommended: true
-        }
-      }
+        },
+        schemas: []
+      },
       create: function (context) {
-        console.log('Hello')
         return {
           Program: function (node) {
             var reports = typling.check(node)
-            for (var i = reports.length; i--;) {
-              var report = report[i]
+            for (var i = 0, max = reports.length; i < max; i++) {
+              var report = reports[i]
               context.report({
-                message: report.name + ': ' + report.message,
-                node: report.node
+                message: report.message,
+                node: report.target
               })
             }
           }
