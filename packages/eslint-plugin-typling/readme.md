@@ -24,10 +24,7 @@ Second, add a `"typling/types"` rule to tell Eslint to create warnings to errors
 
 ```js
 "rules": {
-  // Create warnings:
-  "typling/types": 1,
-  // Create errors:
-  "typling/types": 2
+  "typling/types": 1 // 1 for warnings, 2 for errors
 }
 ```
 
