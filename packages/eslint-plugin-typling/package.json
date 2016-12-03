@@ -16,6 +16,9 @@
     "test": "node test"
   },
   "keywords": [
+    "typling",
+    "eslint",
+    "eslint-plugin"
     "eslint-plugin-typling",
     "jamen"
   ],
