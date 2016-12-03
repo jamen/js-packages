@@ -1,6 +1,10 @@
 # eslint-plugin-typling
 
-> Eslint plugin for typling
+> Typling plugin for Eslint
+
+![Preview Screenshot](preview.png)
+
+A Typling type checker plugin for Eslint
 
 ## Installation
 
@@ -9,6 +13,25 @@ $ npm install --save eslint-plugin-typling
 ```
 
 ## Usage
+
+Load it in your `"plugins"` array:
+
+```js
+"plugins": ["typling" /*, "react", "promise", ... */]
+```
+
+Second, add a `"typling/types"` rule to tell Eslint to create warnings to errors:
+
+```js
+"rules": {
+  // Create warnings:
+  "typling/types": 1,
+  // Create errors:
+  "typling/types": 2
+}
+```
+
+And you're done
 
 ## License
 
