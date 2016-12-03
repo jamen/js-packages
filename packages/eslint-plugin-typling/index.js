@@ -2,7 +2,7 @@ var typling = require('typling-ast')
 
 module.exports = {
   rules: {
-    typling: {
+    types: {
       meta: {
         docs: {
           description: "Checks types using comments",
