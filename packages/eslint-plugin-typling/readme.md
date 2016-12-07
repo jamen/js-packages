@@ -4,7 +4,7 @@
 
 ![Preview Screenshot](preview.png)
 
-A Typling type checker plugin for Eslint
+A Typling type checker plugin for Eslint.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Load it in your `"plugins"` array:
 "plugins": ["typling" /*, "react", "promise", ... */]
 ```
 
-Second, add a `"typling/types"` rule to tell Eslint to create warnings to errors:
+Finally, add a `"typling/types"` rule to tell Eslint to create warnings or errors:
 
 ```js
 "rules": {
@@ -28,7 +28,7 @@ Second, add a `"typling/types"` rule to tell Eslint to create warnings to errors
 }
 ```
 
-And you're done
+And you're done!
 
 ## License
 
