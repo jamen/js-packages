@@ -91,6 +91,8 @@ function plugin (input, opts, cb) {
 }
 ```
 
+Call `cb` with `(null, null)` to gracefully handle missing outputs
+
 ## License
 
 MIT © [Jamen Marz](https://git.io/jamen)
