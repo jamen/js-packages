@@ -42,17 +42,17 @@ window.onload = function () {
   Paint.rect(layers[2], box2)
 
   // Animate box #2's position
-  var t = 0
-  var ang = 2 * Math.PI * 5
-  setInterval(function () {
-    box2.x += Math.sin(ang * t)
-    console.log(box2.x.toFixed(20))
-
-    // Repaint:
-    Paint.clear(layers[2])
-    Paint.rect(layers[2], box2)
-    t++
-  }, 50)
+  // var t = 0
+  // var ang = 2 * Math.PI * 5
+  // setInterval(function () {
+  //   box2.x += Math.sin(ang * t)
+  //   console.log(box2.x.toFixed(20))
+  //
+  //   // Repaint:
+  //   Paint.clear(layers[2])
+  //   Paint.rect(layers[2], box2)
+  //   t++
+  // }, 50)
 
   // Renderer
   var render = Merger(layers, context)
