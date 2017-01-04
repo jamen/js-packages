@@ -3,10 +3,9 @@ var btoa = require('./')
 var Suite = require('benchmark').Benchmark.Suite
 var bench = new Suite('btoa')
 
-var text = `Man is distinguished, not only by his reason, but by this singular passion from
-other animals, which is a lust of the mind, that by a perseverance of delight
-in the continued and indefatigable generation of knowledge, exceeds the short
-vehemence of any carnal pleasure.`
+// var text = `Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.`
+
+var text = 'Hello world!'
 
 var officialBtoa = require('btoa')
 bench.add('official btoa ', function () {

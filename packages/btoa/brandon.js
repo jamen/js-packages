@@ -28,7 +28,7 @@ function encodeByte(byte) {
 }
 function encode(value) {
   var encoded = ''
-  var i = ~~((value.length+1)/3)*3
+  var i = Math.ceil(value.length / 3) * 3
   while (i) {
     var j = 3
     i-=j
