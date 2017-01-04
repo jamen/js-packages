@@ -15,5 +15,4 @@ function doTests (t, btoa) {
 
 test('official btoa', function (t) { doTests(t, official) })
 test('jamen btoa', function (t) { doTests(t, btoa.jamen) })
-test('dustin btoa', function (t) { doTests(t, btoa.dustin) })
 test('brandon btoa', function (t) { doTests(t, btoa.brandon) })

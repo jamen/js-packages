@@ -12,11 +12,6 @@ bench.add('official btoa ', function () {
   officialBtoa(text)
 })
 
-var dustinBtoa = btoa.dustin
-bench.add('dustin btoa   ', function () {
-  dustinBtoa(text)
-})
-
 var brandonBtoa = btoa.brandon
 bench.add('brandon btoa  ', function () {
   brandonBtoa(text)
