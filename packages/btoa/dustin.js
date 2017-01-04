@@ -1,4 +1,4 @@
-var btoa = function (v) {
+module.exports = function (v) {
   v=v.split('')
   for(
     var i=0,
@@ -29,8 +29,8 @@ var btoa = function (v) {
   return r
 }
 
-var wikipedia = 'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.'
+// var wikipedia = 'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.'
 
-console.log(btoa(wikipedia))
+// console.log(btoa(wikipedia))
 
-module.exports = btoa
+// module.exports = btoa
