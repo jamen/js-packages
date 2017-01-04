@@ -1,5 +1,4 @@
 module.exports = function (v) {
-  v=v.split('')
   for(
     var i=0,
         l=v.length,
@@ -10,6 +9,7 @@ module.exports = function (v) {
         r='',
         m='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
         t;
+        // d;
 
         i<(~~(l/3)+1)*4;
 
@@ -17,10 +17,18 @@ module.exports = function (v) {
     ){
 
     if(i<l)
-      n=v[i].charCodeAt().toString(2),
-      c=c+('00000000'.substr(n.length)+n)
+      n=v[i].charCodeAt().toString(2)
+      if(n.length<8)
+        c=c+('00000000'.substr(n.length)+n)
+        // for(d=8-n.length;d>0;--d)n=n+'0',c=c+n
+      else
+        c=c+n
 
-    s=c.substr(u,6);r=r+m[parseInt(s,2)];u=u+6
+      // c=c+(n.lenth<8?('00000000'.substr(n.length)+n):n)
+
+    s=c.substr(u,6)
+    r=r+m[parseInt(s,2)]
+    u=u+6
   }
 
   // t=s.length
@@ -28,9 +36,3 @@ module.exports = function (v) {
 
   return r
 }
-
-// var wikipedia = 'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.'
-
-// console.log(btoa(wikipedia))
-
-// module.exports = btoa
