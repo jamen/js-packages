@@ -27,6 +27,6 @@
     "jamen"
   ],
   "dependencies": {
-    "typling-ast": "^0.1.0"
+    "typling-core": "^0.1.2"
   }
 }

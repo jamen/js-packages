@@ -2,9 +2,7 @@
 
 > Typling plugin for Eslint
 
-![Preview Screenshot](preview.png)
-
-A Typling type checker plugin for Eslint.
+![Screenshot](docs/screenshot.png)
 
 ## Installation
 
@@ -20,15 +18,18 @@ Load it in your `"plugins"` array:
 "plugins": ["typling" /*, "react", "promise", ... */]
 ```
 
-Finally, add a `"typling/types"` rule to tell Eslint to create warnings or errors:
+Configure the rules
 
 ```js
 "rules": {
-  "typling/types": 1 // 1 for warnings, 2 for errors
+  // 1 for warnings, 2 for errors:
+  "typling/type-invalid": 2,
+  "typling/type-missing": 1,
+  "typling/def-missing": 1
 }
 ```
 
-And you're done!
+And you're done
 
 ## License
 
@@ -36,6 +37,6 @@ MIT © [Jamen Marz](https://git.io/jamen)
 
 ---
 
-[![version](https://img.shields.io/npm/v/eslint-plugin-typling.svg?style=flat-square)][package] [![travis](https://img.shields.io/travis/jamen/eslint-plugin-typling.svg?style=flat-square)](https://travis-ci.org/jamen/eslint-plugin-typling) [![downloads](https://img.shields.io/npm/dt/eslint-plugin-typling.svg?style=flat-square)][package] [![license](https://img.shields.io/npm/l/eslint-plugin-typling.svg?style=flat-square)][package]  [![follow](https://img.shields.io/github/followers/jamen.svg?style=social&label=Follow)](https://github.com/jamen)
+[![version](https://img.shields.io/npm/v/eslint-plugin-typling.svg?style=flat-square)][package] [![travis](https://img.shields.io/travis/jamen/eslint-plugin-typling.svg?style=flat-square)](https://travis-ci.org/jamen/eslint-plugin-typling) [![downloads](https://img.shields.io/npm/dt/eslint-plugin-typling.svg?style=flat-square)][package] [![license](https://img.shields.io/npm/l/express.svg?style=flat-square)][package]  [![follow](https://img.shields.io/github/followers/jamen.svg?style=social&label=Follow)](https://github.com/jamen)
 
 [package]: https://npmjs.org/package/eslint-plugin-typling
