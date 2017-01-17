@@ -1,0 +1,24 @@
+{
+  "name": "pos",
+  "version": "0.0.0",
+  "description": "Turn coordinate positions (under 2^15) into a single index",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baggo/pos.git"
+  },
+  "keywords": [
+    "baggo",
+    "pos",
+    "goodaf"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baggo/pos/issues"
+  },
+  "homepage": "https://github.com/baggo/pos#readme"
+}
