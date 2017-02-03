@@ -1,12 +1,12 @@
 {
-  "name": "word",
-  "description": "Generate every combination of characters under a set of rules.",
+  "name": "combin",
+  "description": "Create an array of string combinations",
   "version": "0.0.0",
-  "homepage": "https://github.com/baggo/word",
-  "author": "Baggo Bois (https://github.com/baggo)",
-  "repository": "baggo/word",
+  "homepage": "https://github.com/jamen/combin",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "repository": "jamen/combin",
   "bugs": {
-    "url": "https://github.com/baggo/word/issues"
+    "url": "https://github.com/jamen/combin/issues"
   },
   "license": "MIT",
   "files": [
@@ -20,10 +20,16 @@
     "test": "node test"
   },
   "devDependencies": {
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "tape-benchmark": "^0.0.0"
   },
   "keywords": [
-    "baggo",
-    "word"
+    "combin",
+    "jamen",
+    "combination",
+    "combinations",
+    "k-combination",
+    "set",
+    "string"
   ]
 }

@@ -1,43 +1,53 @@
 
-# word
+# combin
 
-> Generate every combination of characters under a set of rules.
+> Create an array of string combinations
+
+Create string [combinations](https://en.wikipedia.org/wiki/Combination).  Optionally given a set of characters and rule.  It is useful for creating fake data or finding package names
 
 ```js
-var word = require('word')
+var combin = require('combin')
 
-var words = word(5, function (word) {
-  // filter the word
+// All 3 letter combinations with vowel in center:
+combin(3, function (item) {
+  return 'aeiou'.indexOf(item[1]) !== -1
 })
 ```
+
+Create
 
 ## Installation
 
 ```sh
-$ npm install --save baggo/word
+$ npm install --save combin
 ```
 
 ## Usage
 
-### `word(len, [set], rule)`
+### `combin(length, [set, rule])`
 
-Generate all words at the given `len` that match under the rule.  Provide a `set` to generate non-alpha words.
+Create a an array of string [combinations](https://en.wikipedia.org/wiki/Combination), from the characters in `set`, and filtered by a `rule` function
+
+ - `length` (`Number`): The length of each item. e.g., `2` would produce `['aa', 'ab', ...]`
+ - `set` (`String`): A set of characters that make up the combinations
+ - `rule` (`Function`): A function that filters the combinations
 
 ```js
-word(10, function (word) {
-  // validate `word`
-  // return true/false
+combin(3)
+// [ 'aaa', 'aab', 'aac', ..., 'zzx', 'zzy', 'zzz' ]
 
-  // contains an `a`:
-  return word.indexOf('a') !== 1
-})
+combin(2, '01')
+// [ '00', '01', '10', '11' ]
 
-// Specify custom set of chars:
-word(10, 'aeiouy', function (word) {
-  // ...
-})
+combin(2, 'abc', x => x[0] !== 'a')
+// [ 'ba', 'bb', 'bc', 'ca', 'cb', 'cc' ]
 ```
 
 ## License
 
-MIT © [Baggo Bois](https://github.com/baggo)
+MIT © [Jamen Marz](https://git.io/jamen)
+
+---
+
+[![version](https://img.shields.io/npm/v/combin.svg?style=flat-square)][package] [![travis](https://img.shields.io/travis/combin/jamen.svg?style=flat-square)](https://travis-ci.org/combin/jamen) [![downloads/month](https://img.shields.io/npm/dm/combin.svg?style=flat-square)][package] [![downloads](https://img.shields.io/npm/dt/combin.svg?style=flat-square)][package] [![license](https://img.shields.io/npm/l/combin.svg?style=flat-square)][package] [![support me](https://img.shields.io/badge/support%20me-paypal-green.svg?style=flat-square)](https://www.paypal.me/jamenmarz/5usd) [![follow](https://img.shields.io/github/followers/jamen.svg?style=social&label=Follow)](https://github.com/jamen)
+[package]: https://npmjs.com/package/combin
