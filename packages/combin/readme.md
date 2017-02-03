@@ -41,8 +41,3 @@ word(10, 'aeiouy', function (word) {
 ## License
 
 MIT © [Baggo Bois](https://github.com/baggo)
-
----
-
-[![version](https://img.shields.io/npm/v/word.svg?style=flat-square)][package] [![travis](https://img.shields.io/travis/word/baggo.svg?style=flat-square)](https://travis-ci.org/word/baggo) [![downloads/month](https://img.shields.io/npm/dm/word.svg?style=flat-square)][package] [![downloads](https://img.shields.io/npm/dt/word.svg?style=flat-square)][package] [![license](https://img.shields.io/npm/l/word.svg?style=flat-square)][package] [![support me](https://img.shields.io/badge/support%20me-paypal-green.svg?style=flat-square)](https://www.paypal.me/None/5usd) [![follow](https://img.shields.io/github/followers/baggo.svg?style=social&label=Follow)](https://github.com/baggo)
-[package]: https://npmjs.com/package/word
