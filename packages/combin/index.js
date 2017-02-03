@@ -19,7 +19,6 @@ function combin (max, set, rule) {
         indexes[c - 1]++
       }
     }
-    console.log(item)
     if (item.length === max && (rule ? rule(item) : true)) {
       result.push(item)
     }
