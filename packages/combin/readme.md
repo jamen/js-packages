@@ -14,8 +14,6 @@ combin(3, function (item) {
 })
 ```
 
-Create
-
 ## Installation
 
 ```sh
