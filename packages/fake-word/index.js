@@ -1,5 +1,3 @@
-var combin = require('combin')
-
 module.exports = word
 
 var WEIRD = ['ij', 'ji', 'ae', 'ei', 'oi', 'ua', 'xi', 'ix', 'xu', 'ux', 'iy',
