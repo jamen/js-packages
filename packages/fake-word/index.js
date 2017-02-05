@@ -62,5 +62,3 @@ function word (max, amount) {
 
   return item
 }
-
-console.log(word(3, 10))
