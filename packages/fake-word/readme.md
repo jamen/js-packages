@@ -10,8 +10,6 @@ word(3, 5)
 // [ 'ogu', 'oza', 'ovi', 'ioy', 'agi' ]
 ```
 
-A longer description of your function here
-
 ## Installation
 
 ```sh
