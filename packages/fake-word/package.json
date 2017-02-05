@@ -1,7 +1,7 @@
 {
   "name": "fake-word",
   "description": "Create fake words for names or tests",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/jamen/fake-word",
   "author": "Jamen Marz (https://git.io/jamen)",
   "repository": "jamen/fake-word",
