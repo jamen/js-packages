@@ -1,16 +1,17 @@
 {
-  "name": "pull-property",
-  "description": "Select properties and restore the object",
+  "name": "pull-prop",
+  "description": "Select a property and replace inside an object",
   "version": "0.1.0",
   "author": "Jamen Marz (https://git.io/jamen)",
   "main": "index.js",
-  "repository": "jamen/pull-property",
+  "repository": "jamen/pull-prop",
   "scripts": {
     "test": "node test"
   },
   "keywords": [
     "jamen",
-    "pull-property"
+    "pull-stream",
+    "pull-prop"
   ],
   "devDependencies": {
     "tape": "^4.6.3"

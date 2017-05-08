@@ -2,9 +2,9 @@
 const { get, set } = require('object-path')
 const { map } = require('pull-stream')
 
-module.exports = property
+module.exports = prop
 
-function property (name) {
+function prop (name) {
   var pending = []
 
   // Select the property
