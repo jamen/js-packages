@@ -1,0 +1,26 @@
+{
+  "name": "pull-spawn-process",
+  "description": "Use pull-streams with child_process.spawn stdio",
+  "version": "0.0.0",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "main": "index.js",
+  "repository": "jamen/pull-spawn-process",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "jamen",
+    "pull-stream",
+    "child_process",
+    "spawn",
+    "process",
+    "pull-spawn-process"
+  ],
+  "devDependencies": {
+    "pull-stream": "^3.5.0",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "stream-to-pull-stream": "^1.7.2"
+  }
+}
