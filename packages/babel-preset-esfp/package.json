@@ -1,7 +1,7 @@
 {
   "name": "babel-preset-esfp",
   "description": "A Babel preset of functional programming goodies",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Jamen Marz (https://git.io/jamen)",
   "main": "index.js",
   "repository": "jamen/babel-preset-esfp",
