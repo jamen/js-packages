@@ -6,24 +6,20 @@ const { values, map, drain }  = pull
 test('select and restore', t => {
   t.plan(4)
 
-  var { select, replace } = prop('foo.bar.qux')
-
   pull(
     values([
       { foo: { bar: { qux: 1 } } },
       { foo: { bar: { qux: 2 } } },
       { foo: { bar: { qux: 3 } } },
     ]),
-    select,
-    map(qux => qux * 3),
-    replace,
+    prop('foo.bar.qux', () => pull(
+      map(qux => qux * 3)
+    )),
     drain(res => {
       t.is(typeof res, 'object', 'got object')
-      console.log(res)
     }, err => {
       t.false(err, 'ended')
     })
   )
-
 })
 

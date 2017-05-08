@@ -1,24 +1,24 @@
 
 const { get, set } = require('object-path')
-const { map } = require('pull-stream')
+const pull = require('pull-stream')
+const { once, asyncMap, drain } = pull
+const pushable = require('pull-pushable')
 
 module.exports = prop
 
-function prop (name) {
-  var pending = []
-
-  // Select the property
-  var select = map(obj => {
-    pending.push(obj)
-    return get(obj, name)
+function prop (name, transform) {
+  var pending = pushable()
+  return asyncMap((obj, done) => {
+    pull(
+      once(get(obj, name)),
+      transform(),
+      drain(res => {
+        set(obj, name, res)
+        done(null, obj)
+      }, err => {
+        if (err) done(err)
+      })
+    )
   })
-
-  var replace = map(result => {
-    var obj = pending.pop()
-    set(obj, name, result)
-    return obj
-  }) 
-
-  return { select, replace }
 }
 

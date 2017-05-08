@@ -1,20 +1,18 @@
 
 # pull-prop
 
-> Select a property and replace inside an object
+> Map an object's property with a stream
 
 ```js
-var { select, replace } = prop('foo.bar')
-
 pull(
   values([
     { foo: { bar: 123 } },
     { foo: { bar: 321 } },
     { foo: { bar: 333 } }
   ]),
-  select
-  map(bar => bar * 3),
-  replace,
+  prop('foo.bar', () => pull(
+    map(bar => bar * 3)
+  ))
   drain(obj => {
     // ...
   })
@@ -32,50 +30,29 @@ yarn add pull-property
 
 ## Usage
 
-### `prop(name)`
+### `prop(name, transform)`
 
-Create `select`/`replace` streams from the prop name
+A through stream that takes and gives objects, replacing a certain property on them.
 
-### `select`
+ - `name`: The property you are mapping (resolved by [`object-path`](https://www.npmjs.com/package/object-path))
+ - `transform`: A function that returns a through stream, which maps the property
 
-Selects the property in the stream
-
-```js
-var { select } = prop('foo')
-
-pull(
-  values([
-    { foo: 123 },
-    { foo: 222 },
-    { foo: 321 }
-  ]),
-  select,
-  drain(console.log)
-)
-```
-
-### `replace`
-
-Used with `select` to map over properties easier
+An psuedo example with [`pull-files`](https://npmjs.com/pull-files):
 
 ```js
-var { select, replace } = prop('foo.bar')
-
 pull(
-  values([
-    { foo: { bar: 123 } },
-    { foo: { bar: 321 } },
-    { foo: { bar: 333 } }
-  ]),
-  select
-  map(bar => bar * 3),
-  replace,
-  drain(obj => {
+  read('lib/**/*.js'),
+  // Map `data` with buf -> buf streams:
+  prop('data', () => pull(
+    map(babel.transformSync),
+    map(uglify.compileSync),
     // ...
+  )),
+  write('out', err => {
+    if (err) throw err
   })
 )
 ```
-
 
 ---
 
