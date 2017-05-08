@@ -13,7 +13,7 @@ pull(
     { foo: { bar: 333 } }
   ]),
   select
-  map(bar => x * 3),
+  map(bar => bar * 3),
   replace,
   drain(obj => {
     // ...
@@ -68,7 +68,7 @@ pull(
     { foo: { bar: 333 } }
   ]),
   select
-  map(bar => x * 3),
+  map(bar => bar * 3),
   replace,
   drain(obj => {
     // ...
