@@ -1,0 +1,22 @@
+{
+  "name": "pull-property",
+  "description": "Select properties and restore the object",
+  "version": "0.0.0",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "main": "index.js",
+  "repository": "jamen/pull-property",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "jamen",
+    "pull-property"
+  ],
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "object-path": "^0.11.4",
+    "pull-stream": "^3.5.0"
+  }
+}
