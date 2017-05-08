@@ -12,7 +12,7 @@ exports.plugins = [
   [ require('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }  ],
   // Non-standard
   require('babel-plugin-pull'),
-  require('babel-plugin-implicit-return'),
+  require('babel-plugin-implicit-return').default,
   [ require('babel-plugin-transform-react-jsx'), { pragma: 'h' } ]
 ]
   
