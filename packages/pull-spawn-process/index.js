@@ -9,11 +9,11 @@ function spawn (command, args, options) {
   // Get process
   const proc = child_process.spawn(command, args, options)
   
-  // Return duplex (with extra `stream.error` for stderr)
-  return {
-    source: to_pull.source(proc.stdout), 
-    sink: to_pull.sink(proc.stdin),
-    error: to_pull.sink(proc.stderr)
-  }
+  // Turn into a duplex stream
+  proc.source = to_pull.source(proc.stdout)
+  proc.sink = to_pull.sink(proc.stdin)
+  proc.error = to_pull.sink(proc.stderr)
+
+  return proc
 }
 

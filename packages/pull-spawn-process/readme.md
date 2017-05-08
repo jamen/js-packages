@@ -15,7 +15,7 @@ pull(cat, drain(console.log))
 pull(values(['foo', 'bar']), cat)
 ```
 
-Commands are duplex streams with an additional `error` stream to handle `proc.stderr`
+Returns a duplex stream with an additional `error` prop to handle `proc.stderr`.  The other child_process methods are available too.
 
 ## Install
 
@@ -37,6 +37,8 @@ var cat = spawn('cat')
 var echo = spawn('echo', ['foo', 'bar'])
 var eslint = spawn('eslint', files, { stdio: 'inherit' })
 ```
+
+The rest of the `ChildProcess` methods are exposed on the object
 
 ---
 
