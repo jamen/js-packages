@@ -5,16 +5,14 @@
   "author": "Jamen Marz (https://git.io/jamen)",
   "main": "index.js",
   "repository": "jamen/babel-preset-esfp",
-  "scripts": {
-    "test": "node test"
-  },
   "keywords": [
     "jamen",
-    "babel-preset-esfp"
+    "babel-preset",
+    "babel-preset-esfp",
+    "functional",
+    "programming",
+    "babel"
   ],
-  "devDependencies": {
-    "tape": "^4.6.3"
-  },
   "dependencies": {
     "babel-plugin-implicit-return": "^1.0.1",
     "babel-plugin-pull": "^0.1.0",
