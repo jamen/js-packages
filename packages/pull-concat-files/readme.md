@@ -9,7 +9,7 @@ Simple `file -> file` concat.  Consumes all files in the stream, use something l
 pull(
   read(__dirname + '/src/**/*.css'),
   concat('app.css'),
-  write(__dirname + '/out/)
+  write(__dirname + '/out/')
 )
 ```
 
@@ -29,8 +29,8 @@ yarn add pull-concat-files
 
 Concats all files in the stream into one file under `path`.
 
-```
-pull(
+```js
+pull
   read('src/**/*.css'),
   concat('app.css'),
   write('out/')
