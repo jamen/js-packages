@@ -1,7 +1,7 @@
 {
   "name": "pull-concat-files",
   "description": "Concat pull-stream files into one",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jamen Marz (https://git.io/jamen)",
   "main": "index.js",
   "repository": "jamen/pull-concat-files",
