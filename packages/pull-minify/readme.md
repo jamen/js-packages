@@ -5,12 +5,11 @@
 
 ```js
 pull(
-  read(__dirname + '/src/**/*.{css,js}'),
+  read(__dirname + '/src/**/*.[js,css}'),
   minify({
-    css: { ... },
-    js: { ... }
+    js: { mangle: true, toplevel: true },
+    css: { restructure: true }
   }),
-  // bundle, write, ftp, etc.
   write(__dirname + '/out')
 )
 ```
@@ -35,10 +34,10 @@ Options are `options.js` and `options.css` which go to `minify.js` and `minify.c
 
 ```js
 pull(
-  read(__dirname + '/src/**/*.[js,css}'),
+  read(__dirname + '/src/**/*.{js,css}'),
   minify({
-    js: { mangle: true, toplevel: true },
-    css: { restructure: true }
+    js: { ...options.js },
+    css: { ...options.css }
   }),
   write(__dirname + '/out')
 )
