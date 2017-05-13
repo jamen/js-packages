@@ -5,7 +5,7 @@
 
 ```js
 pull(
-  read(__dirname + '/src/**/*.[js,css}'),
+  read(__dirname + '/src/**/*.{js,css}'),
   minify({
     js: { mangle: true, toplevel: true },
     css: { restructure: true }
