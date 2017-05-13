@@ -48,5 +48,5 @@ pull
 Maintained by [Jamen Marz](https://git.io/jamen) (See on [Twitter](https://twitter.com/jamenmarz) and [GitHub](https://github.com/jamen) for questions & updates)
 
 [`pull-files`]: https://github.com/jamen/pull-files
-[`pull-bundle`]: https://githun.com/jamen/pull-bundle
+[`pull-bundle`]: https://github.com/jamen/pull-bundle
 [`pull-bundle-js`]: https://github.com/jamen/pull-bundle-js
