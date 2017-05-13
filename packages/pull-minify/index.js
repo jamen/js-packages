@@ -1,5 +1,5 @@
 
-const { pull, drain } = require('pull-stream')
+const { pull, through, drain } = require('pull-stream')
 const imux = require('pull-imux')
 const { extname } = require('path')
 
@@ -19,13 +19,17 @@ function minify (options) {
 
   pull(
     channels.js,
-    minify.js(options.js),
+    options.js !== false
+      ? minify.js(options.js)
+      : through(),
     channels.js
   )
 
   pull(
     channels.css,
-    minify.css(options.css),
+    options.css !== false
+      ? minify.css(options.css)
+      : through(),
     channels.css
   )
 

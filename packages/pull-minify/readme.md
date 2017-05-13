@@ -43,6 +43,8 @@ pull(
 )
 ```
 
+You can opt out by passing `js: false`, `css: false`, etc.
+
 ### `minify.js(options)`
 
 ### `minify.css(options)`
