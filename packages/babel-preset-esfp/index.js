@@ -13,6 +13,7 @@ exports.plugins = [
   // Non-standard
   require('babel-plugin-pull'),
   require('babel-plugin-implicit-return').default,
-  [ require('babel-plugin-transform-react-jsx'), { pragma: 'h' } ]
+  [ require('babel-plugin-transform-react-jsx'), { pragma: 'h' } ],
+  require('babel-plugin-transform-flow-strip-types')
 ]
-  
+
