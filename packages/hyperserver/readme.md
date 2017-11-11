@@ -3,9 +3,7 @@
 
 > Tiny WebSocket server that hooks into Hyperapp
 
-Provdies a WebSocket server that hooks into Hyperapp actions.
-
-It adds "remote actions", which are simply actions that get their data transformed through your server.  The different can be visualized as:
+Provdies a WebSocket server that hooks into Hyperapp actions.  It uses "remote actions", which are just actions that pass through a server first.  The different can be visualized as:
 
 ```
 Normal action:
