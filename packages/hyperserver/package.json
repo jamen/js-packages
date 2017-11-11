@@ -1,0 +1,26 @@
+{
+  "name": "hyperserver",
+  "version": "0.0.0",
+  "description": "Route some actions through your server, and elsewhere offline.",
+  "repository": "jamen/hyperserver",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "remote.js"
+  ],
+  "keywords": [
+    "hyperapp",
+    "server",
+    "remote",
+    "websocket"
+  ],
+  "author": "Jamen Marz <jamenmarz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/hyperserver/issues"
+  },
+  "homepage": "https://github.com/jamen/hyperserver#readme",
+  "dependencies": {
+    "ws": "^3.3.1"
+  }
+}
