@@ -1,5 +1,5 @@
 
-# hyperserver
+# @jamen/hyperserver
 
 > Tiny WebSocket server that hooks into Hyperapp
 
@@ -23,7 +23,7 @@ Remote action:
 ## Install
 
 ```
-npm i -D hyperserver
+npm i -D @jamen/hyperserver
 ```
 
 ## Usage
