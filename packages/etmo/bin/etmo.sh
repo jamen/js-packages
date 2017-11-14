@@ -5,8 +5,10 @@ DIRNAME=`dirname $(readlink -f $0)`
 
 # Copy, create, and update
 if [ ! -e $ETMO ]; then
+  echo "Looks like your first time running etmo.  Running setup..."
   mkdir -p $ETMO
   bash $DIRNAME/etmo-update.sh
+  echo "(Finished)"
 fi
 
 if [ ! $1 = "-a" ] && [ `command -v emacs` ]; then
