@@ -1,0 +1,25 @@
+{
+  "name": "atomacs",
+  "version": "0.0.0",
+  "description": "Use Atom and Emacs as one editor.",
+  "author": "Jamen Marz <jamenmarz@gmail.com>",
+  "repository": "jamen/atomacs",
+  "bin": {
+    "atomacs": "./bin/atomacs.sh",
+    "atomacs-update": "./bin/atomacs-update.sh"
+  },
+  "keywords": [
+    "atom",
+    "emacs",
+    "editor",
+    "keybindings",
+    "themes",
+    "plugins",
+    "electron"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/atomacs/issues"
+  },
+  "homepage": "https://github.com/jamen/atomacs#readme"
+}
