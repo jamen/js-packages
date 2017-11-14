@@ -5,9 +5,13 @@
 
 A collection a scripts, configs, and packages to make Atom and Emacs behave as one editor.  Atom is turned more Emacs-like, and Emacs is used for the terminal editor.
 
-This requires that you have `atom`, `emacs`, and `bash` installed.
+Why did I do this?  Because I like Atom as a graphical editor, but I like the Emacs
+keybindings and minimalism.  I also like using Emacs as a quick terminal editor in
+fallback of Atom.
 
 ## Install
+
+This requires that you have `atom`, `emacs`, and `bash` installed.
 
 You can install Atomacs through npm:
 
