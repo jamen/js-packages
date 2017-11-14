@@ -1,12 +1,12 @@
 {
-  "name": "atomacs",
+  "name": "etmo",
   "version": "0.0.0",
   "description": "Use Atom and Emacs as one editor.",
   "author": "Jamen Marz <jamenmarz@gmail.com>",
-  "repository": "jamen/atomacs",
+  "repository": "jamen/etmo",
   "bin": {
-    "atomacs": "./bin/atomacs.sh",
-    "atomacs-update": "./bin/atomacs-update.sh"
+    "etmo": "./bin/etmo.sh",
+    "etmo-update": "./bin/etmo-update.sh"
   },
   "keywords": [
     "atom",
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jamen/atomacs/issues"
+    "url": "https://github.com/jamen/etmo/issues"
   },
-  "homepage": "https://github.com/jamen/atomacs#readme"
+  "homepage": "https://github.com/jamen/etmo#readme"
 }
