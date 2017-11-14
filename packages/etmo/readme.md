@@ -1,7 +1,7 @@
 
 # Atomacs (WIP)
 
-> Use Atom and Emacs as one editor 
+> Use Atom and Emacs as one editor
 
 A collection a scripts, configs, and packages to make Atom and Emacs behave as one editor.  Atom is turned more Emacs-like, and Emacs is used for the terminal editor.
 
@@ -36,7 +36,7 @@ To start as a graphical process (Atom) you run:
 $ atomacs -a file
 ```
 
-Atomics doesnt conflict with your Atom and Emacs configs, but there is files included in Atomics for compatibility. They are created at: 
+This uses separate configs from your own so it doesnt conflict, but there is extra files included in these for compatibility between Atom and Emacs. The Atomacs config files are at:
 
 ```
 ~/.config/atomacs
@@ -45,9 +45,11 @@ Atomics doesnt conflict with your Atom and Emacs configs, but there is files inc
 └── .emacs.d
 ```
 
+You can install separate Atom and Emacs packages, but it breaks continuity.
+
 ### Uninstall and Reinstall
 
-To uninstall (or reinstall) atomacs run:
+To uninstall (or reinstall) run:
 
 ```sh
 # Uninstall atomacs
