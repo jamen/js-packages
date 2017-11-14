@@ -5,7 +5,7 @@
 
 A collection of packages to make Atom and Emacs behave as one editor.  Atom is turned more Emacs-like, and Emacs is used for a terminal editor.
 
-Atom is a good graphical editor (theme support, linting, etc.), but Emacs has a minimal layout and better keybindings.  I also like using Emacs in the terminal for quicker edits.  But I my editors between graphical and terminal to be more similar.
+Why did I do this?  Because Atom is a good graphical editor (theme support, linting, multicursors, etc.), but Emacs has better layout and keybindings. Also for using Emacs in the terminal for quick edits.  I want the editors between graphical and terminal to be more similar.
 
 ## Install
 
