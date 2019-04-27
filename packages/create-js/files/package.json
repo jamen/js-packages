@@ -1,0 +1,14 @@
+{
+    "name": "<%= answers.name %>",
+    <% if (answers.description) { %>"description": "<%= answers.description %>",<% } %>
+    "author": "<%= answers.author %>",
+    <% if (answers.main) { %>"main": "<%= answers.main %>",<% } %>
+    <% if (answers.bin) { %>"bin": "<%= answers.bin %>",<% } %>
+    "version": "0.1.0"<% if (answers.repository || answers.homepage || !answers.public) { %>,<% } %>
+    <% if (answers.public) { %>
+    <% if (answers.repository) { %>"repository": "<%= answers.repository %>"<% if (answers.homepage) { %>,<% } } %>
+    <% if (answers.homepage) { %>"homepage": "<%= answers.homepage %>"<% } %>
+    <% } else { %>
+    "private": true
+    <% } %>
+}
