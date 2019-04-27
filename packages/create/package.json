@@ -1,0 +1,14 @@
+{
+    "name": "@jamen/create",
+    "version": "0.1.0",
+    "description": "Functions for scaffolding projects.",
+    "main": "src/create.js",
+    "author": "Jamen Marz <me@jamenmarz.com>",
+    "license": "MIT",
+    "dependencies": {
+        "lodash.template": "4.4.0",
+        "mkdirp": "^0.5.1",
+        "mri": "^1.1.4",
+        "prompts": "^0.1.8"
+    }
+}
