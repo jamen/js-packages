@@ -1,0 +1,12 @@
+{
+  "name": "@jamen/bench",
+  "version": "0.4.0",
+  "description": "Better defaults for Benchmark.js.",
+  "author": "Jamen Marz <jamenmarz@gmail.com>",
+  "main": "src/bench.js",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "prettier-bytes": "^1.0.4",
+    "systeminformation": "^3.37.9"
+  }
+}
