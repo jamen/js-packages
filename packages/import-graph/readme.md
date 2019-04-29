@@ -1,61 +1,30 @@
-# import-graph
+# @jamen/import-graph
 
-Create a graph of imports with [Graphviz][2].
+Create import graphs with [Graphviz][2].
 
 ![example][1]
 
-## Install
-
-```sh
-npm i @jamen/import-graph
-```
-
-Or use `npx`:
-
-```sh
-npx @jamen/import-graph <options>
-```
-
 ## Usage
 
-For simple use, call it inside a directory with `package.json`. It creates DOT and is combined with  `dot` or `neato` from [Graphviz][2].
+The easiest way to use it is `npx`:
 
-```sh
-import-graph | dot -Tsvg > imports.svg
+```
+npx @jamen/import-graph src/**.js | dot -T svg > imports.svg
 ```
 
-Any number of entries can be specified instead
+The command takes file paths and outputs [DOT][3].
 
-```sh
-import-graph lib/project.js
-import-graph lib/**.js
-```
+The folloing options may be supplied:
 
-### Options
+- `-i`, `--ignore <pattern>`: Omit files that match the pattern. Defaults to defaults to `node_modules` and `.git`.
+- `-f`, `--from <directory>`: Change where paths in labels are relative from. Defaults to cwd.
+- `-o`, `--output <file>`: Outputs to a file instead of stdout.
 
-Use `--ignore` or `-i` to omit files that match a pattern (defaults to `node_modules` and `.git`)
+### What languages are supported?
 
-```sh
-import-graph -i "dist"
-```
+This tool uses regex patterns to build the graph, making it easy to support many languages with different import syntax, without parsing every language.
 
-Use `--from` or `-f` to change where the paths in labels are relative to.  Defaults to the current working directory.
-
-```sh
-import-graph lib/**.js --from lib
-```
-
-Use `--output` or `-o` if you don't want to use stdio for some reason.
-
-```sh
-import-graph -o imports.dot
-```
-
-### How does it work? What languages are supported?
-
-It uses the file types to categorize and match files for import strings.  This is a flexible and simple way to support many languages, but this means it is only _mostly reliable_.  If there is bugged output, you can try `--ignore`, or post a bug report here.
-
-That said, the languages supported so far are:
+The files it supports by default are:
 
 - JavaScript ESM & Commonjs
 - TypeScript
@@ -65,9 +34,6 @@ That said, the languages supported so far are:
 - Less.js
 - Stylus
 
-Files that are imported by these, that are not supported, will still appear in the import graph, but they cannot be traversed for their dependencies and they are marked as a single color. Also checking for built-in modules and dependencies to visually separate them.
-
-The patterns, colors, and supported extensions cannot be customized, as there is little need to, although this would not be hard to accomplish. If you want to add more rules or the ability to customize, contributions are welcome!
-
 [1]: example.svg
 [2]: http://graphviz.org/
+[3]: https://en.wikipedia.org/wiki/DOT_(graph_description_language)

@@ -1,7 +1,7 @@
 {
     "name": "@jamen/import-graph",
     "version": "0.2.2",
-    "description": "Create a graph of imports with Graphviz.",
+    "description": "Create import graphs with Graphviz.",
     "author": "Jamen Marz <jamenmarz@gmail.com>",
     "main": "src/import-graph.js",
     "bin": "src/import-graph-cli.js",
