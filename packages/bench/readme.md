@@ -1,20 +1,14 @@
-# bench
+# @jamen/bench
 
-Better defaults for [Benchmark.js](https://github.com/bestiejs/benchmark.js/).
+A [benchmark.js][benchmark.js] reporter.
 
 ![](./demo.gif)
-
-## Install
-
-```sh
-npm i @jamen/bench
-```
 
 ## Usage
 
 ### `benchmark()`
 
-Create a [`Benchmark.Suite`](https://benchmarkjs.com/docs) with event listeners that report for you.  Also reports the CPU and memory. Use `.add` calls then `.run` to perform the benchmarks.
+Creates a `Benchmark.Suite` that does the reporting for you. See [benchmark.js's docs][benchmark-docs] for more info.
 
 ```js
 let bench = benchmark()
@@ -25,3 +19,6 @@ bench.add('foobar', () => {
 
 bench.run()
 ```
+
+[benchmark.js]: https://github.com/bestiejs/benchmark.js
+[benchmark-docs]: https://benchmarkjs.com/docs
