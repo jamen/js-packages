@@ -38,7 +38,7 @@ async function createGraph (entries, options = {}, graph) {
         const imports = await getImports(entry, options)
 
         for (const imp of imports) {
-            const [ impPath, type ] = await resolveModule(imp, entryDir)
+            const [ impPath, type ] = await resolveModule(imp, entry, entryDir)
 
             // An external module (i.e. built-in or dependency)
             if (type !== 'normal') {
@@ -112,7 +112,7 @@ async function getImports (file, options) {
     return matches
 }
 
-async function resolveModule (imp, dir) {
+async function resolveModule (imp, entry, dir) {
     if (builtinModules.indexOf(imp) !== -1) {
         return [ imp, 'core' ]
     }
@@ -127,7 +127,22 @@ async function resolveModule (imp, dir) {
             return [ impPath, 'normal' ]
         }
     } catch (e) {
-        return [ imp, 'external' ]
+        if (e.code !== 'ENOENT') {
+            throw e
+        }
+    }
+
+    try {
+        const res = await resolveModule(imp + extname(entry), entry, dir)
+        if (res) {
+            return res
+        }
+    } catch (e) {
+        if (e.code === 'ENOENT') {
+            return [ imp, 'external' ]
+        } else {
+            throw e
+        }
     }
 }
 
