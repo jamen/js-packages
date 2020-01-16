@@ -1,0 +1,12 @@
+{
+    "name": "@jamen/http-api-kit",
+    "description": "HTTP API kit.",
+    "version": "0.0.0",
+    "main": "src/main.js",
+    "dependencies": {
+        "ajv": "^6.10.2",
+        "cookie": "^0.4.0",
+        "jsonwebtoken": "^8.5.1",
+        "recursive-readdir": "^2.2.2"
+    }
+}
