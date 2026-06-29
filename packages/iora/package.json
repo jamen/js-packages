@@ -1,0 +1,38 @@
+{
+  "name": "iora",
+  "version": "4.0.0",
+  "description": "Create modular HTTP servers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "build": "babel --presets es2015 lib/ -d dist/",
+    "pretest": "npm run build",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iora/iora.git"
+  },
+  "keywords": [
+    "iora",
+    "modular",
+    "http",
+    "server"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iora/iora/issues"
+  },
+  "homepage": "https://github.com/iora/iora#readme",
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1"
+  },
+  "dependencies": {
+    "refig": "^2.1.0"
+  }
+}

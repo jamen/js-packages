@@ -1,0 +1,4 @@
+lib/
+.travis.yml
+.gitignore
+.eslintrc.json
