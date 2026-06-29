@@ -1,0 +1,32 @@
+{
+  "name": "graphics",
+  "description": "A graphics thing, dunno what to call it",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamen/graphics",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "repository": "Jamen%20Marz/graphics",
+  "main": "lib",
+  "bugs": {
+    "url": "https://github.com/jamen/graphics/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "budo test"
+  },
+  "devDependencies": {
+    "budo": "^9.3.0",
+    "tape": "^4.6.3"
+  },
+  "keywords": [
+    "jamen",
+    "graphics",
+    "browser",
+    "canvas",
+    "paint",
+    "render",
+    "animate"
+  ]
+}
