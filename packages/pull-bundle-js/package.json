@@ -1,0 +1,36 @@
+{
+  "name": "pull-bundle-js",
+  "description": "Bundle JS files inside pull-stream with Browserify",
+  "version": "0.6.0",
+  "homepage": "https://github.com/jamen/pull-bundle-js",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "repository": "jamen/pull-bundle-js",
+  "bugs": {
+    "url": "https://github.com/jamen/pull-bundle-js/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "node test",
+    "bench": "node bench"
+  },
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "pull-stream": "^3.5.0"
+  },
+  "devDependencies": {
+    "pull-files": "^1.0.0",
+    "tape": "^4.6.3"
+  },
+  "keywords": [
+    "jamen",
+    "pull-stream",
+    "pull-build-tools",
+    "browserify",
+    "bundle",
+    "commonjs",
+    "modules"
+  ]
+}
