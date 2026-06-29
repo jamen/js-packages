@@ -1,0 +1,37 @@
+{
+  "name": "hyperapp-persist",
+  "description": "Persist an app's state to the next session",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "repository": "jamen/hyperapp-persist",
+  "version": "3.1.0",
+  "license": "MIT",
+  "keywords": [
+    "hyperapp",
+    "plugin",
+    "persist",
+    "state",
+    "save",
+    "session",
+    "localstorage"
+  ],
+  "scripts": {
+    "test:browser": "budo test -- -t babelify -t es2040"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^7.3.0",
+    "budo": "^10.0.3",
+    "es2040": "^1.2.5",
+    "hyperapp": "^0.13.0"
+  }
+}
