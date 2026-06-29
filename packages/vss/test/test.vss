@@ -1,0 +1,6 @@
+.test {
+  height: #{height};
+  width: #{width};
+  background-color: black;
+  transition:all 500ms;
+}

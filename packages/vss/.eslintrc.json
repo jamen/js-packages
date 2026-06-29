@@ -1,0 +1,10 @@
+{
+  "extends": "google",
+  "rules": {
+    "require-jsdoc": 0,
+    "guard-for-in": 0
+  },
+  "env": {
+    "browser": true
+  }
+}

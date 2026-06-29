@@ -1,0 +1,36 @@
+{
+  "name": "vss",
+  "author": "Jamen Marzonie",
+  "version": "0.1.0-2",
+  "description": "Use VSS (Virtual Style Sheets) to enable data-binding with CSS.",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamen/vss"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "private": false,
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "eslint": "^2.7.0",
+    "eslint-config-google": "^0.4.0",
+    "jquery": "^2.2.3",
+    "node-static": "^0.7.7"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async-each": "^1.0.0",
+    "async-waterfall": "^0.1.5",
+    "balanced-match": "^0.4.0",
+    "browser-request": "^0.3.3",
+    "buffer": "^4.5.1",
+    "css": "^2.2.1",
+    "sem": "^0.1.1"
+  }
+}
