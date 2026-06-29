@@ -1,0 +1,29 @@
+{
+  "name": "pull-create-html",
+  "description": "Create an html file from js and css file streams",
+  "version": "2.0.0",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "main": "index.js",
+  "repository": "jamen/pull-create-html",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "jamen",
+    "pull-stream",
+    "pull-build-tools",
+    "html",
+    "create",
+    "boilerplate"
+  ],
+  "devDependencies": {
+    "pull-files": "^1.1.0",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "h2ml": "^0.3.0",
+    "pull-cat": "^1.1.11",
+    "pull-concat-files": "^0.2.0",
+    "pull-stream": "^3.6.0"
+  }
+}
