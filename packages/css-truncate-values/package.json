@@ -1,0 +1,30 @@
+{
+  "name": "css-truncate-values",
+  "description": "Truncate CSS numbers while retaining the original value.",
+  "version": "0.1.4",
+  "homepage": "https://github.com/jamen/css-truncate-values",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/css-truncate-values",
+  "bugs": {
+    "url": "https://github.com/jamen/css-truncate-values/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test.js | tap-spec"
+  },
+  "keywords": [
+    "css",
+    "normalize",
+    "value"
+  ],
+  "dependencies": {
+    "css-strip-units": "^0.2.3"
+  },
+  "devDependencies": {
+    "tape": "^4.6.0",
+    "tap-spec": "^4.1.1"
+  }
+}
