@@ -1,0 +1,28 @@
+{
+  "name": "domain-check",
+  "version": "1.2.0",
+  "description": "A module and command line tool for checking a domain's availability.",
+  "author": "Jamen Marz",
+  "main": "node index.js",
+  "bin": {
+    "domain-check": "index.js",
+    "c": "index.js"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/domain-check.git"
+  },
+  "keywords": [
+    "cli",
+    "domain",
+    "check"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/domain-check/issues"
+  },
+  "homepage": "https://github.com/jamen/domain-check#readme"
+}
