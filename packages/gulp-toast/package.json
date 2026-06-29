@@ -1,0 +1,30 @@
+{
+  "name": "gulp-toast",
+  "version": "0.1.0",
+  "description": "Group project configurations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "install": "gulp toast"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/gulp-toast.git"
+  },
+  "keywords": [
+    "management",
+    "gulp",
+    "plugin"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/gulp-toast/issues"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "refig": "*",
+    "through2": "*"
+  },
+  "homepage": "https://github.com/jamen/gulp-toast#readme"
+}

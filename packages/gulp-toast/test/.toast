@@ -1,0 +1,6 @@
+{
+  ".jshintrc": {
+    "node": true,
+    "globals": { "test": true }
+  }
+}
