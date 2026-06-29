@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-console": 0,
+    "react/prop-types": 0,
+    "react/prefer-es6-class": 1,
+    "react/prefer-stateless-function": 0,
+    "require-jsdoc": 2,
+    "consistent-return": 2,
+    "no-undefined": 2,
+    "max-len": [2, 80, 2],
+    "indent": [2, 2],
+    "valid-jsdoc": [2, {
+      "requireReturn": false,
+      "prefer": {
+        "returns": "return",
+        "arg": "param",
+        "argument": "param"
+      }
+    }]
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  }
+}
