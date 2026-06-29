@@ -1,0 +1,29 @@
+{
+  "name": "rela",
+  "version": "2.1.0",
+  "description": "Create and manage a independent WebSocket server for API systems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test",
+    "install": "xa create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/rela.git"
+  },
+  "keywords": [
+    "web",
+    "sockets",
+    "api"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soundcove/jamen/issues"
+  },
+  "devDependencies": {
+    "xa-cli": "*",
+    "ava": "*"
+  },
+  "homepage": "https://github.com/jamen/rela#readme"
+}
