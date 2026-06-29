@@ -1,0 +1,14 @@
+{
+    "name": "rollup-plugin-browser-extension",
+    "author": "Jamen Marz <me@jamenmarz.com>",
+    "description": "Rollup plugin for browser extensions.",
+    "main": "src/browser-extension.js",
+    "version": "1.0.0",
+    "repository": "jamen/rollup-plugin-browser-extension",
+    "keywords": [
+        "rollup-plugin",
+        "webextension",
+        "browser",
+        "extension"
+    ]
+}
