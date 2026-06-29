@@ -1,0 +1,23 @@
+{
+  "name": "esfp",
+  "description": "Better functional programming in JS",
+  "version": "0.2.0",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "main": "index.js",
+  "repository": "jamen/esfp",
+  "keywords": [
+    "jamen",
+    "esfp",
+    "browserify",
+    "functional",
+    "programming"
+  ],
+  "devDependencies": {
+    "pull-stream": "^3.5.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-esfp": "^0.2.0",
+    "through2": "^2.0.3"
+  }
+}
