@@ -1,0 +1,42 @@
+{
+  "name": "gulp-pug",
+  "version": "2.0.0",
+  "description": "Gulp plugin for compiling Pug templates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js test; ava -t | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/gulp-pug.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "pugjs"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/gulp-pug/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/jamen/gulp-pug#readme",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "eslint": "^2.7.0",
+    "eslint-config-google": "^0.4.0",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "precommit": "^1.2.0",
+    "tap-spec": "^4.1.1"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "pug": "latest",
+    "through2": "^2.0.1",
+    "util-extend": "^1.0.3"
+  }
+}
