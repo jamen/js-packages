@@ -1,0 +1,40 @@
+{
+  "name": "lazy-o",
+  "description": "Painless chains that are lazy, functional, and fast.",
+  "version": "0.6.1",
+  "homepage": "https://github.com/jamen/lazy-o",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/lazy-o",
+  "bugs": {
+    "url": "https://github.com/jamen/lazy-o/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "eslint index.js test.js benchmark.js && tape test.js | tap-spec",
+    "bench": "node benchmark"
+  },
+  "keywords": [
+    "lazy",
+    "functional",
+    "utility"
+  ],
+  "devDependencies": {
+    "benchmark": "^2.1.1",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.1",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "fast-args": "^1.0.0"
+  }
+}
