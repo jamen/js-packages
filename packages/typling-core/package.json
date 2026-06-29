@@ -1,0 +1,42 @@
+{
+  "name": "typling-core",
+  "description": "Check typlings on Esprima-style AST",
+  "version": "0.1.2",
+  "homepage": "https://github.com/jamen/typling-core",
+  "author": "Jamen Marz (https://git.io/jamen)",
+  "repository": "jamen/typling-core",
+  "bugs": {
+    "url": "https://github.com/jamen/typling-core/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "tape 'test/*.js'"
+  },
+  "keywords": [
+    "typling",
+    "typling-core",
+    "esprima",
+    "estree",
+    "static",
+    "type",
+    "analysis",
+    "jamen"
+  ],
+  "devDependencies": {
+    "esprima": "^3.1.2",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "doctrine": "^2.0.0",
+    "estree-ancestors": "^0.1.0",
+    "estree-walk": "^0.2.2",
+    "ordinal-numbers": "^1.0.1"
+  }
+}
