@@ -1,0 +1,39 @@
+{
+  "name": "osia",
+  "author": "Jamen Marzonie",
+  "version": "2.0.0-1",
+  "description": "An elegant Promise-based tasking system.",
+  "main": "lib",
+  "bin": "lib/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamen/osia"
+  },
+  "scripts": {
+    "test": "eslint src lib; ava test"
+  },
+  "private": false,
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.12.0",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2"
+  },
+  "dependencies": {
+    "chokidar": "^1.4.3",
+    "glob-promise": "^1.0.6",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "mkdirp-promise": "^1.0.4",
+    "promise-routine": "^1.0.0",
+    "vinyl-file": "^2.0.0",
+    "vinyl-write": "^0.1.1",
+    "watch": "^0.17.1"
+  },
+  "engines": {
+    "node": ">=4.4.2"
+  }
+}
