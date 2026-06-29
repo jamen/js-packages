@@ -1,0 +1,27 @@
+{
+  "name": "il",
+  "version": "0.1.2",
+  "description": "Simple generator to use in iteration loops.",
+  "main": "index.js",
+  "devDependencies": {
+    "tape": "^4.4.0"
+  },
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/li.git"
+  },
+  "keywords": [
+    "loop",
+    "iteration",
+    "generator"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/li/issues"
+  },
+  "homepage": "https://github.com/jamen/li#readme"
+}
