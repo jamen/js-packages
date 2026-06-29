@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+var fii = require('../lib');
+var list = require('cli-list');
+var minimist = require('minimist');
+var path = require('path');
+
+var opts = {
+  alias: {
+    'link-dir': 'l',
+    'dl-dir': 'd'
+  },
+  default: {
+    'link-dir': path.join(process.cwd(), 'node_modules'),
+    'dl-dir': path.join(process.env.HOME, '.fii/packages')
+  }
+};
+var installs = list(process.argv.slice(2)).map(function(args) {
+  return minimist(args, opts);
+});
+
+installs.forEach(function(install) {
+  var packages = install._;
+  var linkDir = install['link-dir'];
+  var dlDir = install['dl-dir'];
+
+  fii.install(packages, linkDir, dlDir);
+});
