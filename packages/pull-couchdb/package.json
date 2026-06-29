@@ -1,0 +1,17 @@
+{
+  "name": "pull-couchdb",
+  "version": "0.1.0",
+  "description": "Pull-streams for reading and writing in CouchDB.",
+  "author": "Jamen Marz <jamenmarz@gmail.com>",
+  "main": "lib/pull-couchdb.js",
+  "keywords": [
+    "pull-stream"
+  ],
+  "dependencies": {
+    "@jamen/query-string": "0.0.0",
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
+    "tape": "^4.9.0"
+  }
+}
