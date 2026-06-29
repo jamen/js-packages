@@ -1,0 +1,38 @@
+{
+  "name": "generator-devjs",
+  "version": "1.6.8",
+  "description": "DevJS's Yeoman generator, for our own projects, but also for you.",
+  "main": "app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devjs/generator-devjs.git"
+  },
+  "scripts": {
+    "build": "rm -rf generators; babel src -d generators --presets es2015 --plugins add-module-exports --ignore 'src/_template/**'; cp -r src/_template generators/_template",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devjs/generator-devjs/issues"
+  },
+  "files": [
+    "generators",
+    "template"
+  ],
+  "homepage": "https://github.com/devjs/generator-devjs#readme",
+  "dependencies": {
+    "deep-assign": "^2.0.0",
+    "github-user": "^1.0.0",
+    "yeoman-generator": "^0.22.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.1",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.5.0"
+  }
+}
