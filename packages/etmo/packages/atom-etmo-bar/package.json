@@ -1,0 +1,24 @@
+{
+  "name": "atom-etmo-bar",
+  "version": "0.0.0",
+  "description": "An Emacs-like bar for Atom that runs command pallete",
+  "main": "lib/index.js",
+  "author": "Jamen Marz <jamenmarz@gmail.com>",
+  "repository": "jamen/etmo",
+  "keywords": [
+    "atom",
+    "emacs",
+    "etmo",
+    "command",
+    "file",
+    "switcher"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/etmo/issues"
+  },
+  "homepage": "https://github.com/jamen/etmo#readme",
+  "dependencies": {
+    "hyperapp": "^0.16.0"
+  }
+}

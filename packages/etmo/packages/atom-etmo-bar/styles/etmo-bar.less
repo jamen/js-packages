@@ -1,0 +1,37 @@
+
+.etmo-bar {
+  padding: 5px;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  .command {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+  }
+
+  .command input {
+    display: inline-block;
+    border: 0;
+    flex: initial;
+    padding: 0;
+    background: none;
+  }
+
+  .command .block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    flex: auto;
+  }
+
+  .command .block .inline-block {
+    display: inline-block;
+    width: auto;
+    flex-shrink: 0;
+    margin: 3px;
+  }
+}

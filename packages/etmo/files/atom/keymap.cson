@@ -1,0 +1,19 @@
+
+'atom-workspace':
+  'ctrl-g': 'core:cancel'
+  'alt-x': 'command-palette:toggle'
+  'ctrl-s ctrl-a': 'pane:split-up'
+  'ctrl-s ctrl-d': 'pane:split-down'
+  'ctrl-s ctrl-q': 'pane:close'
+  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+
+'atom-workspace atom-text-editor':
+  'alt-w': 'core:cut'
+  'ctrl-w': 'core:copy'
+  'ctrl-y': 'core:paste'
+  'ctrl-x ctrl-s': 'core:save'
+  'ctrl-x ctrl-q': 'core:close'
+  'ctrl-x ctrl-c': 'application:quit'
+  'ctrl-/': 'core:undo'
+  'ctrl-shift-/': 'core:redo'
+  'alt-/': 'editor:toggle-line-comments'
