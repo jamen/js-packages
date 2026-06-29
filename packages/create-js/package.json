@@ -1,0 +1,11 @@
+{
+    "name": "@jamen/create-js",
+    "version": "0.1.0",
+    "description": "Scaffold a new JavaScript project.",
+    "author": "Jamen Marz <jamenmarz@gmail.com>",
+    "license": "MIT",
+    "bin": "./src/create.js",
+    "dependencies": {
+        "@jamen/create": "^0.1.0"
+    }
+}
