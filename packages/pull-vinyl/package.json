@@ -1,0 +1,42 @@
+{
+  "name": "pull-vinyl",
+  "description": "Read and write `Vinyl` objects in the file system.",
+  "version": "1.2.0",
+  "homepage": "https://github.com/jamen/pull-vinyl",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/pull-vinyl",
+  "bugs": {
+    "url": "https://github.com/jamen/pull-vinyl/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "pull-stream",
+    "vinyl",
+    "file",
+    "gulp",
+    "fs"
+  ],
+  "scripts": {
+    "test": "tape 'test/*.js'"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "tape": "^4.6.2"
+  },
+  "dependencies": {
+    "pull-glob": "^1.0.6",
+    "pull-stream": "^3.4.5",
+    "vinyl": "^2.0.1",
+    "vinyl-file": "^2.0.0",
+    "vinyl-write": "^0.2.2"
+  }
+}
