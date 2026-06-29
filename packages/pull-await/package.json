@@ -1,0 +1,30 @@
+{
+  "name": "pull-await",
+  "description": "Await promises in a pull-stream.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/jamen/pull-await",
+  "author": "Jamen Marz (https://github.com/jamen)",
+  "repository": "jamen/pull-await",
+  "bugs": {
+    "url": "https://github.com/jamen/pull-await/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test.js | tap-spec"
+  },
+  "keywords": [
+    "await",
+    "pull"
+  ],
+  "devDependencies": {
+    "bluebird": "^3.4.5",
+    "pull-stream": "^3.4.4",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
