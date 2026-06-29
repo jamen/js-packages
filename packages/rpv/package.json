@@ -1,0 +1,29 @@
+{
+  "name": "rpv",
+  "version": "5.0.1",
+  "description": "Represent CSS through objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamen/rpv.git"
+  },
+  "keywords": [
+    "css",
+    "rpv",
+    "selector",
+    "property",
+    "value"
+  ],
+  "author": "Jamen Marz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamen/rpv/issues"
+  },
+  "devDependencies": {
+    "ava": "latest"
+  },
+  "homepage": "https://github.com/jamen/rpv#readme"
+}
